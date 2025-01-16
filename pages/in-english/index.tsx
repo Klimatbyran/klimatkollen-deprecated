@@ -383,7 +383,7 @@ function InEnglish() {
             contributions through
             {' '}
             <a
-              href="https://github.com/Klimatbyran/klimatkollen"
+              href="https://github.com/Klimatbyran/"
               target="_blank"
               rel="noreferrer"
             >

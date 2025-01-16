@@ -15,6 +15,7 @@
     "Header": {
       "about": "Om oss",
       "english": "In English",
+      "insights": "Insikter",
       "jobs": "Jobb",
       "menu": "Meny",
       "method": "Källor och metod"
@@ -103,7 +104,7 @@
     "notFoundSubtitle": "Går tillbaka till startskärmen om"
   },
   "footer": {
-    "developedWith": "Klimatkollen är utvecklad med [öppen källkod](https://github.com/Klimatbyran/klimatkollen) och drivs av den ideella föreningen Klimatbyrån.",
+    "developedWith": "Klimatkollen är utvecklad med [öppen källkod](https://github.com/Klimatbyran/) och drivs av den ideella föreningen Klimatbyrån.",
     "email-us": "Maila oss",
     "license": "CC BY-SA [Attribution-ShareAlike 4.0 International license](http://creativecommons.org/licenses/by-sa/4.0/)",
     "partners": "Partners",

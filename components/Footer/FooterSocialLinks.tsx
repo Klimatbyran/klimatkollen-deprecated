@@ -74,7 +74,7 @@ function SocialList() {
         Icon={LinkedInLogo}
       />
       <SocialListItem
-        link="https://github.com/Klimatbyran/klimatkollen"
+        link="https://github.com/Klimatbyran/"
         text="GitHub"
         Icon={GitHubLogo}
       />

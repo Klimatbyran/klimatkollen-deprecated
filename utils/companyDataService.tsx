@@ -22,6 +22,10 @@ function getScope3Total({
   return null
 }
 
+export function getLatestReportingPeriodWithEmissions(company: CompanyJsonData) {
+  return company.reportingPeriods.find(({ emissions }) => Boolean(emissions))
+}
+
 export class CompanyDataService {
   companies: Array<Company> = []
 
@@ -41,7 +45,8 @@ export class CompanyDataService {
 
       this.companies = jsonData
         .map((data: CompanyJsonData) => {
-          const currentEmissions = data.reportingPeriods[0]?.emissions
+          const currentPeriod = getLatestReportingPeriodWithEmissions(data)
+          const currentEmissions = currentPeriod?.emissions
 
           // If either scope 1 or scope 2 have verification, then we use them for the total.
           // Otherwise, we use the combined scope1And2 if it exists
@@ -59,8 +64,7 @@ export class CompanyDataService {
 
           return {
             Name: data.name,
-            Tags: data.tags,
-            Url: data.reportingPeriods[0]?.reportURL ?? '',
+            Url: currentPeriod?.reportURL ?? '',
             WikiId: data.wikidataId,
             Comment: data.description,
             Emissions: emissionsPerYear,

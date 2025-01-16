@@ -27,7 +27,6 @@ export type Scope3 = {
 
 export type CompanyJsonData = {
   name: string
-  tags: Array<string>
   description?: string
   wikidataId?: string
   reportingPeriods: Array<{
@@ -61,7 +60,6 @@ export type CompanyEmissionsPerYear = {
 
 export type Company = {
   Name: string
-  Tags: string[]
   Url: string
   WikiId: string | null
   Comment: string
