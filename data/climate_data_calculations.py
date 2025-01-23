@@ -112,38 +112,6 @@ def df_to_dict(df: pd.DataFrame, num_decimals: int) -> dict:
         temp = [ series_to_dict(df.iloc[i], numeric_columns) for i in range(len(df)) ]
     return temp
 
-def convert_df_to_dict(df: pd.DataFrame, numeric_columns: list) -> dict:
-    temp = [
-        {
-            'kommun': df.iloc[i]['Kommun'],
-            'län': df.iloc[i]['Län'],
-            'emissions': { str(year): df.iloc[i][year] for year in numeric_columns },
-            'budget': df.iloc[i]['Budget'],
-            'emissionBudget': df.iloc[i]['parisPath'],
-            'approximatedHistoricalEmission': df.iloc[i]['approximatedHistorical'],
-            'totalApproximatedHistoricalEmission': df.iloc[i]['totalApproximatedHistorical'],
-            'trend': df.iloc[i]['trend'],
-            'trendEmission': df.iloc[i]['trendEmission'],
-            'historicalEmissionChangePercent': df.iloc[i]['historicalEmissionChangePercent'],
-            'neededEmissionChangePercent': df.iloc[i]['neededEmissionChangePercent'],
-            'hitNetZero': df.iloc[i]['hitNetZero'],
-            'budgetRunsOut': df.iloc[i]['budgetRunsOut'],
-            'electricCarChangePercent': df.iloc[i]['electricCarChangePercent'],
-            'electricCarChangeYearly': df.iloc[i]['electricCarChangeYearly'],
-            'climatePlanLink': df.iloc[i]['Länk till aktuell klimatplan'],
-            'climatePlanYear': df.iloc[i]['Antagen år'],
-            'climatePlanComment': df.iloc[i]['Namn, giltighetsår, kommentar'],
-            'bicycleMetrePerCapita': df.iloc[i]['metrePerCapita'],
-            'totalConsumptionEmission': df.iloc[i]['Total emissions'],
-            'electricVehiclePerChargePoints': df.iloc[i]['EVPC'],
-            'procurementScore': df.iloc[i]['procurementScore'],
-            'procurementLink': df.iloc[i]['procurementLink'],
-        }
-        for i in range(len(df))
-    ]
-    return temp
-
-
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Climate data calculations")
     parser.add_argument("-o", "--outfile", default="output/climate-data.json", type=str, help="Output filename (JSON formatted)")
