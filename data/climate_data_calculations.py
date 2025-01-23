@@ -61,8 +61,8 @@ def series_to_dict(row: pd.Series, numeric_columns: List[Any]) -> Dict:
     A dictionary with the transformed data.
     """
     cdata = {
-        'kommun': row['Kommun'],
-        'län': row['Län'],
+        'name': row['Kommun'],
+        'region': row['Län'],
         'emissions': { str(year): row[year] for year in numeric_columns },
         'budget': row['Budget'],
         'emissionBudget': row['parisPath'],

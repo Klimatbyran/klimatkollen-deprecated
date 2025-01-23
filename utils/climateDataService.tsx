@@ -76,7 +76,7 @@ export class ClimateDataService {
         } as unknown as ClimatePlan
 
         return {
-          Name: data.kommun,
+          Name: data.name,
           HistoricalEmission: emission,
           ApproximatedHistoricalEmission: approximatedEmission,
           EmissionTrend: trend,
