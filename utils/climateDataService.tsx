@@ -76,7 +76,7 @@ export class ClimateDataService {
         } as unknown as ClimatePlan
 
         return {
-          Name: data.kommun,
+          Name: data.name,
           HistoricalEmission: emission,
           ApproximatedHistoricalEmission: approximatedEmission,
           EmissionTrend: trend,
@@ -84,7 +84,7 @@ export class ClimateDataService {
           NeededEmissionChangePercent: data.neededEmissionChangePercent,
           HitNetZero: data.hitNetZero,
           BudgetRunsOut: data.budgetRunsOut,
-          ElectricCarChangePercent: data.electricCarChangePercent,
+          ElectricCarChangePercent: data.electricCarChangePercent*100,
           ElectricCarChangeYearly: data.electricCarChangeYearly,
           ClimatePlan: climatePlan,
           BicycleMetrePerCapita: data.bicycleMetrePerCapita,
