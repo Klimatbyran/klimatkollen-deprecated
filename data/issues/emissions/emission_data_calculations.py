@@ -134,7 +134,8 @@ def calculate_municipality_budgets(df, last_year_in_range, current_year, budget,
     temp = []
     if approximated_years_since_budget:
         for i in range(len(df)):
-            # Get index in approximated historical series for the year from which emissions need to be subtracted
+            # Get index in approximated historical series for
+            # the year from which emissions need to be subtracted
             approximated_years = list(df.iloc[i]['approximatedHistorical'].keys())
             start_subtract_year_idx = approximated_years.index(approximated_years_since_budget[0])
             # Get approximated values and years since budget
@@ -193,7 +194,6 @@ def calculate_paris_path(df, last_year_in_range, current_year, budget_year):
     df['parisPath'] = temp
 
     return df
-
 
 def calculate_historical_change_percent(df, last_year_in_range):
     """

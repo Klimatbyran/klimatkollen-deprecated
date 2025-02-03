@@ -40,6 +40,13 @@ We utilize Python libraries such as Pandas and NumPy to perform various calculat
     
     If you notice any test failing, please submit a ticket about it.
 
+### Performance profiling
+
+Requires Graphwiz installed on the OS https://www.graphviz.org/download/
+```sh
+py.test tests --profile-svg && open prof/combined.svg
+```
+
 ### How to Update Data on Site
 
 To recalculate and refresh the site's data, navigate to the `/data` folder and execute the following command:

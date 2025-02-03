@@ -1,10 +1,13 @@
 import pandas as pd
 
+from .cache_utilities import cache_df
+
 PATH_SMHI = 'https://nationellaemissionsdatabasen.smhi.se/' + \
     'api/getexcelfile/?county=0&municipality=0&sub=CO2'
 
 
-def get_smhi_data():
+@cache_df(path=PATH_SMHI)
+def get_smhi_data(path=PATH_SMHI):
     """
     Downloads data from SMHI and loads it into a pandas dataframe.
 
@@ -12,7 +15,7 @@ def get_smhi_data():
         pandas.DataFrame: The dataframe containing the SMHI data.
     """
 
-    df_raw = pd.read_excel(PATH_SMHI)
+    df_raw = pd.read_excel(path, engine="openpyxl")
 
     # Remove the first 4 rows and reset the index
     df_raw = df_raw.drop([0, 1, 2]).reset_index(drop=True)
