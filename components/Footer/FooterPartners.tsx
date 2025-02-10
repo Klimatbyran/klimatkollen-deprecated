@@ -60,6 +60,14 @@ function Partners() {
           alt="Exponential Roadmap logo"
         />
       </a>
+      <a href="https://www.climateainordics.com/" target="_blank" rel="noreferrer">
+        <img
+          src="/logos/partners/climateAiNordics.png"
+          width={90}
+          height="auto"
+          alt="ClimateAiNordics logo"
+          />
+      </a>
     </PartnerContainer>
   )
 }

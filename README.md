@@ -88,7 +88,7 @@ Google.org, Postkodstiftelsen.
 
 We'd also like to thank our current and former partners
 
-ClimateView, Klimatklubben.se, Researcher's Desk, Exponential Roadmap, WWF, We Don't Have Time, Våra Barns Klimat, Argand, StormGeo, Iteam, Precisit.
+ClimateView, Klimatklubben.se, Researcher's Desk, Exponential Roadmap, WWF, We Don't Have Time, Våra Barns Klimat, Argand, StormGeo, Iteam, Precisit, Climate AI Nordics.
 
 ## LICENSE
 
