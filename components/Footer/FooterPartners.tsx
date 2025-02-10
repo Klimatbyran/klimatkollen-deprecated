@@ -66,7 +66,7 @@ function Partners() {
           width={90}
           height="auto"
           alt="ClimateAiNordics logo"
-          />
+        />
       </a>
     </PartnerContainer>
   )
