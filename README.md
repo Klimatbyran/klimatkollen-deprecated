@@ -1,6 +1,6 @@
 ## Klimatkollen
 
-This is the official source code for [klimatkollen.se](https://klimatkollen.se).
+Please observe! This is the LEGACY code for [klimatkollen.se](https://klimatkollen.se). Any improvements/changes/fixes should be made in the [new repo](https://github.com/Klimatbyran/beta)! Only exceptions are work on the data processing pipeline, as this is used by the new site as well.
 
 ## Free our climate data!
 
