@@ -60,7 +60,7 @@ def series_to_dict(row: pd.Series, numeric_columns: List[Any]) -> Dict:
     Returns:
     A dictionary with the transformed data.
     """
-    cdata = {
+    return {
         'name': row['Kommun'],
         'region': row['Län'],
         'emissions': { str(year): row[year] for year in numeric_columns },
@@ -89,7 +89,6 @@ def series_to_dict(row: pd.Series, numeric_columns: List[Any]) -> Dict:
         'procurementScore': row['procurementScore'],
         'procurementLink': row['procurementLink'],
     }
-    return cdata
 
 def round_processing(v, num_decimals: int):
     new_v = v

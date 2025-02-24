@@ -41,6 +41,10 @@ const NavigationList = styled.ul`
     height: var(--btn-size);
     align-items: center;
   }
+
+  @media only screen and (max-width: 1055px) {
+    gap: 1.3rem;
+  }
 `
 
 const NavigationItem = styled.li`
