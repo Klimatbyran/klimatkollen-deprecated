@@ -103,12 +103,13 @@ def max_decimals(entry: Dict, num_decimals: int) -> Dict:
 def df_to_dict(df: pd.DataFrame, num_decimals: int) -> dict:
     numeric_columns = [col for col in df.columns if str(col).isdigit()]
 
-    temp = []
     if num_decimals >= 0:
-        temp = [ max_decimals(series_to_dict(df.iloc[i], numeric_columns), num_decimals) for i in range(len(df)) ]
+        return [
+            max_decimals(series_to_dict(row, numeric_columns), num_decimals)
+            for _, row in df.iterrows()
+        ]
     else:
-        temp = [ series_to_dict(df.iloc[i], numeric_columns) for i in range(len(df)) ]
-    return temp
+        return [series_to_dict(row, numeric_columns) for _, row in df.iterrows()]
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Climate data calculations")
