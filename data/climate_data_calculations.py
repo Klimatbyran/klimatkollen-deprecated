@@ -91,12 +91,11 @@ def series_to_dict(row: pd.Series, numeric_columns: List[Any]) -> Dict:
     }
 
 def round_processing(v, num_decimals: int):
-    new_v = v
     if (isinstance(v, float)):
-        new_v = np.round(v, num_decimals)
+        return np.round(v, num_decimals)
     elif (isinstance(v, dict)):
-        new_v = {k: round_processing(a, num_decimals) for k, a in v.items()}
-    return new_v
+        return {k: round_processing(a, num_decimals) for k, a in v.items()}
+    return v
 
 def max_decimals(entry: Dict, num_decimals: int) -> Dict:
     return {k: round_processing(v, num_decimals) for k, v in entry.items()}
