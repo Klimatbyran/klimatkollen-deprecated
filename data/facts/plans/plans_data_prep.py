@@ -21,7 +21,7 @@ def get_climate_plans(df):
 
     df_plans = df_plans.rename(columns={df_plans.columns[6]: "cred"})
 
-    df_plans = df_plans.where(pd.notnull(df_plans), "")
+    df_plans = df_plans.where(pd.notnull(df_plans), None)
 
     df = df.merge(df_plans, on="Kommun", how="left")
 
