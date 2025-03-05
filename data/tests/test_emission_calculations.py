@@ -389,7 +389,7 @@ class TestEmissionCalculations(unittest.TestCase):
         )
 
         df_expected = df_input.copy()
-        df_expected["hitNetZero"] = ["Aldrig", datetime.date(2054, 6, 13)]
+        df_expected["hitNetZero"] = [None, datetime.date(2054, 6, 13)]
 
         df_result = calculate_hit_net_zero(df_input, LAST_YEAR_WITH_SMHI_DATA)
 
