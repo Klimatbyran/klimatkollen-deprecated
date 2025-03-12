@@ -5,7 +5,7 @@ import pandas as pd
 from scipy.optimize import linprog
 
 
-PATH_POWERCIRCLE_CPEV = "solutions/cars/sources/powercircle_municipality_data_dec_2023.csv"
+PATH_POWERCIRCLE_CPEV = "solutions/cars/sources/powercircle_municipality_data_dec_2024.csv"
 
 
 def get_electric_vehicle_per_charge_points():
