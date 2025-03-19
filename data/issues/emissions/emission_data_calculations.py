@@ -342,7 +342,7 @@ def calculate_hit_net_zero(df, last_year_in_range):
             )
 
         else:  # If the slope is not negative you will never reach net zero
-            temp.append("Aldrig")
+            temp.append(None)
 
     df["hitNetZero"] = temp
     return df
