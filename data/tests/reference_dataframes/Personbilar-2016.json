@@ -1,0 +1,324 @@
+{
+  "Header": {
+    "Column": [
+      {
+        "Name": "ar",
+        "Type": "D",
+        "DataType": "Time",
+        "Filters": ["2015"],
+        "Value": "AR",
+        "Unit": null,
+        "Description": null,
+        "UniqueId": "Dar"
+      },
+      {
+        "Name": "drivmedel",
+        "Type": "D",
+        "DataType": "String",
+        "Filters": ["103", "104", "105"],
+        "Value": "Drivmedel",
+        "Unit": null,
+        "Description": "",
+        "UniqueId": "Ddrivmedel"
+      },
+      {
+        "Name": "reglan",
+        "Type": "D",
+        "DataType": "Region",
+        "Filters": [],
+        "Value": "Län",
+        "Unit": null,
+        "Description": "",
+        "UniqueId": "Dreglan"
+      },
+      {
+        "Name": "regkom",
+        "Type": "D",
+        "DataType": "Region",
+        "Filters": [],
+        "Value": "Kommun",
+        "Unit": null,
+        "Description": "",
+        "UniqueId": "Dregkom"
+      },
+      {
+        "Name": "nyregunder",
+        "Type": "M",
+        "DataType": "String",
+        "Filters": null,
+        "Value": "Antal nyregistreringar",
+        "Unit": "",
+        "Description": "Avser under perioden",
+        "UniqueId": "Dnyregunder"
+      },
+      {
+        "Name": "itrfslut",
+        "Type": "M",
+        "DataType": "String",
+        "Filters": null,
+        "Value": "Antal i trafik",
+        "Unit": "",
+        "Description": "Avser i slutet av perioden",
+        "UniqueId": "Ditrfslut"
+      }
+    ],
+    "Description": null
+  },
+  "Rows": [
+    {
+      "Cell": [
+        {
+          "Name": "2015",
+          "IsMeasure": false,
+          "Description": "",
+          "Column": "ar",
+          "Value": "2015",
+          "FormattedValue": "2015",
+          "Level": "0",
+          "Gis": "",
+          "UniqueId": "DarDV2015",
+          "NoteIds": [],
+          "Versions": []
+        },
+        {
+          "Name": "103",
+          "IsMeasure": false,
+          "Description": "",
+          "Column": "drivmedel",
+          "Value": "El",
+          "FormattedValue": "El",
+          "Level": "0",
+          "Gis": "",
+          "UniqueId": "DdrivmedelDV103",
+          "NoteIds": [],
+          "Versions": []
+        },
+        {
+          "Name": "01",
+          "IsMeasure": false,
+          "Description": "",
+          "Column": "reglan",
+          "Value": "Stockholm",
+          "FormattedValue": "Stockholm",
+          "Level": "0",
+          "Gis": "",
+          "UniqueId": "DreglanDV01",
+          "NoteIds": [],
+          "Versions": []
+        },
+        {
+          "Name": "0114",
+          "IsMeasure": false,
+          "Description": "",
+          "Column": "regkom",
+          "Value": "Upplands-Väsby",
+          "FormattedValue": "Upplands-Väsby",
+          "Level": "0",
+          "Gis": "",
+          "UniqueId": "DregkomDV0114",
+          "NoteIds": [],
+          "Versions": []
+        },
+        {
+          "Name": "",
+          "IsMeasure": true,
+          "Description": "",
+          "Column": "nyregunder",
+          "Value": "10",
+          "FormattedValue": "10",
+          "Level": "0",
+          "Gis": "",
+          "UniqueId": "",
+          "NoteIds": [],
+          "Versions": []
+        },
+        {
+          "Name": "",
+          "IsMeasure": true,
+          "Description": "",
+          "Column": "itrfslut",
+          "Value": "16",
+          "FormattedValue": "16",
+          "Level": "0",
+          "Gis": "",
+          "UniqueId": "",
+          "NoteIds": [],
+          "Versions": []
+        }
+      ],
+      "IsTotal": false
+    },
+    {
+      "Cell": [
+        {
+          "Name": "2015",
+          "IsMeasure": false,
+          "Description": "",
+          "Column": "ar",
+          "Value": "2015",
+          "FormattedValue": "2015",
+          "Level": "0",
+          "Gis": "",
+          "UniqueId": "DarDV2015",
+          "NoteIds": [],
+          "Versions": []
+        },
+        {
+          "Name": "103",
+          "IsMeasure": false,
+          "Description": "",
+          "Column": "drivmedel",
+          "Value": "El",
+          "FormattedValue": "El",
+          "Level": "0",
+          "Gis": "",
+          "UniqueId": "DdrivmedelDV103",
+          "NoteIds": [],
+          "Versions": []
+        },
+        {
+          "Name": "01",
+          "IsMeasure": false,
+          "Description": "",
+          "Column": "reglan",
+          "Value": "Stockholm",
+          "FormattedValue": "Stockholm",
+          "Level": "0",
+          "Gis": "",
+          "UniqueId": "DreglanDV01",
+          "NoteIds": [],
+          "Versions": []
+        },
+        {
+          "Name": "0115",
+          "IsMeasure": false,
+          "Description": "",
+          "Column": "regkom",
+          "Value": "Vallentuna",
+          "FormattedValue": "Vallentuna",
+          "Level": "0",
+          "Gis": "",
+          "UniqueId": "DregkomDV0115",
+          "NoteIds": [],
+          "Versions": []
+        },
+        {
+          "Name": "",
+          "IsMeasure": true,
+          "Description": "",
+          "Column": "nyregunder",
+          "Value": "2",
+          "FormattedValue": "2",
+          "Level": "0",
+          "Gis": "",
+          "UniqueId": "",
+          "NoteIds": [],
+          "Versions": []
+        },
+        {
+          "Name": "",
+          "IsMeasure": true,
+          "Description": "",
+          "Column": "itrfslut",
+          "Value": "9",
+          "FormattedValue": "9",
+          "Level": "0",
+          "Gis": "",
+          "UniqueId": "",
+          "NoteIds": [],
+          "Versions": []
+        }
+      ],
+      "IsTotal": false
+    },
+    {
+      "Cell": [
+        {
+          "Name": "2015",
+          "IsMeasure": false,
+          "Description": "",
+          "Column": "ar",
+          "Value": "2015",
+          "FormattedValue": "2015",
+          "Level": "0",
+          "Gis": "",
+          "UniqueId": "DarDV2015",
+          "NoteIds": [],
+          "Versions": []
+        },
+        {
+          "Name": "103",
+          "IsMeasure": false,
+          "Description": "",
+          "Column": "drivmedel",
+          "Value": "El",
+          "FormattedValue": "El",
+          "Level": "0",
+          "Gis": "",
+          "UniqueId": "DdrivmedelDV103",
+          "NoteIds": [],
+          "Versions": []
+        },
+        {
+          "Name": "01",
+          "IsMeasure": false,
+          "Description": "",
+          "Column": "reglan",
+          "Value": "Stockholm",
+          "FormattedValue": "Stockholm",
+          "Level": "0",
+          "Gis": "",
+          "UniqueId": "DreglanDV01",
+          "NoteIds": [],
+          "Versions": []
+        },
+        {
+          "Name": "0117",
+          "IsMeasure": false,
+          "Description": "",
+          "Column": "regkom",
+          "Value": "Österåker",
+          "FormattedValue": "Österåker",
+          "Level": "0",
+          "Gis": "",
+          "UniqueId": "DregkomDV0117",
+          "NoteIds": [],
+          "Versions": []
+        },
+        {
+          "Name": "",
+          "IsMeasure": true,
+          "Description": "",
+          "Column": "nyregunder",
+          "Value": "19",
+          "FormattedValue": "19",
+          "Level": "0",
+          "Gis": "",
+          "UniqueId": "",
+          "NoteIds": [],
+          "Versions": []
+        },
+        {
+          "Name": "",
+          "IsMeasure": true,
+          "Description": "",
+          "Column": "itrfslut",
+          "Value": "31",
+          "FormattedValue": "31",
+          "Level": "0",
+          "Gis": "",
+          "UniqueId": "",
+          "NoteIds": [],
+          "Versions": []
+        }
+      ],
+      "IsTotal": false
+    }
+  ],
+  "Errors": null,
+  "Description": "",
+  "Name": "Personbilar",
+  "OriginalName": "T10026",
+  "Notes": {},
+  "NextPublishDate": "0001-01-01T00:00:00"
+}

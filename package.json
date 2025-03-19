@@ -7,7 +7,8 @@
     "start": "next start",
     "lint": "next lint",
     "test": "vitest",
-    "analyze": "cross-env ANALYZE=true next build"
+    "analyze": "cross-env ANALYZE=true next build",
+    "trafa:process": "tsx data/trafa/index.ts"
   },
   "dependencies": {
     "@danmarshall/deckgl-typings": "^4.9.13",
@@ -73,6 +74,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-testing-library": "^6.2.2",
     "prettier": "^3.2.5",
+    "tsx": "^4.7.1",
     "typescript": "^5.3.3",
     "vitest": "^1.6.0",
     "webpack-bundle-analyzer": "^4.10.1"

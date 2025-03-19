@@ -15,7 +15,7 @@ from facts.municipalities_counties import get_municipalities
 from facts.procurements.climate_requirements_in_procurements import get_procurement_data
 from issues.emissions.emission_data_calculations import emission_calculations
 from issues.consumption.consumption_data_calculations import get_consumption_emissions
-
+from trafa.process_data import get_electric_car_change
 # Notebook from ClimateView that our calculations are based on:
 # https://colab.research.google.com/drive/1qqMbdBTu5ulAPUe-0CRBmFuh8aNOiHEb?usp=sharing
 
