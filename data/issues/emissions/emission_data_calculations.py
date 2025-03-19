@@ -15,7 +15,7 @@ from issues.emissions.trend_calculations import (
 )
 
 
-CURRENT_YEAR = 2024  # current year
+CURRENT_YEAR = 2025  # current year
 YEAR_SECONDS = 60 * 60 * 24 * 365  # a year in seconds
 
 
