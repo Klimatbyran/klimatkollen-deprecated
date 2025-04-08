@@ -15,7 +15,7 @@ from issues.emissions.trend_calculations import (
 )
 
 
-CURRENT_YEAR = 2024  # current year
+CURRENT_YEAR = 2025  # current year
 YEAR_SECONDS = 60 * 60 * 24 * 365  # a year in seconds
 
 
@@ -216,6 +216,11 @@ def calculate_paris_path(df, last_year_in_range, current_year, budget_year):
 
     temp = []
     for i in range(len(df)):
+        # Check if the budget is 0 or negative
+        if df.iloc[i]["Budget"] <= 0:
+            temp.append(None)  # Set parisPath to None
+            continue  # Skip to the next municipality
+
         # We'll store the exponential path for each municipality in a dictionary
         # where the keys are the years
         dicts = {}
@@ -281,7 +286,7 @@ def calculate_historical_change_percent(df, last_year_in_range):
 
 def calculate_needed_change_percent(df, current_year, budget_year):
     """
-    Calculate the needed yearly emission level decrease to reach the Paris goal.
+    Calculate the needed yearly emission level decrease to reach the Paris goal. Set to None if budget is <= 0.
 
     Args:
         df (pandas.DataFrame): The input DataFrame containing emission data.
@@ -290,6 +295,7 @@ def calculate_needed_change_percent(df, current_year, budget_year):
         pandas.DataFrame: The input DataFrame with an additional column
                           'neededEmissionChangePercent' representing the
                           percentage change in emission levels needed to reach the goal.
+                          This is None if the goal is unreachable.
     """
 
     # Year from which the paris path starts
@@ -297,12 +303,22 @@ def calculate_needed_change_percent(df, current_year, budget_year):
 
     temp = []
     for i in range(len(df)):
-        # arbitrarily chosen years
-        start = df.iloc[i]["parisPath"][first_year + 1]
-        final = df.iloc[i]["parisPath"][first_year + 2]
-        temp.append(((start - final) / start) * 100)
+        if df.iloc[i]["Budget"] <= 0:
+            temp.append(None)
+        else:
+            # arbitrarily chosen years
+            start = df.iloc[i]["parisPath"][first_year + 1]
+            final = df.iloc[i]["parisPath"][first_year + 2]
+            temp.append(((start - final) / start) * 100)
 
+    # Ensure the column is of object type to handle None correctly
     df["neededEmissionChangePercent"] = temp
+
+    # Replace NaN values with None
+    df["neededEmissionChangePercent"] = df["neededEmissionChangePercent"].replace(
+        {np.nan: None}
+    )
+
     return df
 
 
