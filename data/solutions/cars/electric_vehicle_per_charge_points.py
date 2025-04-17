@@ -23,7 +23,7 @@ def get_electric_vehicle_per_charge_points():
     # Load CPEV data from PowerCircle
     df_evpc_raw = pd.read_csv(PATH_POWERCIRCLE_CPEV)
 
-    # Rename the unnamed column to "Kommun" and convert 'Kommun' to titlse caseƒƒ
+    # Rename the unnamed column to "Kommun" and convert 'Kommun' to title case
     df_evpc_raw = df_evpc_raw.rename(columns={"Unnamed: 0": "Kommun"})
     df_evpc_raw["Kommun"] = df_evpc_raw["Kommun"].str.title()
 
