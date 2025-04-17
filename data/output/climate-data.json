@@ -1373,7 +1373,7 @@
     "climatePlanComment": "Handlingsplan för fossilfria transporter",
     "bicycleMetrePerCapita": 1.780664395229983,
     "totalConsumptionEmission": 6118.0,
-    "electricVehiclePerChargePoints": 10000000000.0,
+    "electricVehiclePerChargePoints": null,
     "procurementScore": "0",
     "procurementLink": ""
   },
@@ -22334,7 +22334,7 @@
     "climatePlanComment": "Plan saknas.",
     "bicycleMetrePerCapita": 4.755460544660284,
     "totalConsumptionEmission": 6070.4,
-    "electricVehiclePerChargePoints": 10000000000.0,
+    "electricVehiclePerChargePoints": null,
     "procurementScore": "1",
     "procurementLink": ""
   },
@@ -29515,7 +29515,7 @@
     "climatePlanComment": "Hållbarhetsprogram. Gäller tillsvidare.",
     "bicycleMetrePerCapita": 2.8459860383944156,
     "totalConsumptionEmission": 5883.9,
-    "electricVehiclePerChargePoints": 10000000000.0,
+    "electricVehiclePerChargePoints": null,
     "procurementScore": "2",
     "procurementLink": "https://drive.google.com/file/d/1GImZzAP8XtBTbmc3aaOyERVvPTJ9CyMY/view?usp=drive_link"
   },
