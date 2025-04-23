@@ -34,8 +34,7 @@ def get_consumption_emissions(df):
             total_emissions_list.append(
                 {
                     "Kommun": properties["Kommun"],
-                    "Konsumtionsutsläpp (ton/person/år)": properties["Total emissions"]
-                    / 1000,
+                    "Konsumtionsutsläpp (ton/person/år)": properties["Total emissions"],
                 }
             )
 
