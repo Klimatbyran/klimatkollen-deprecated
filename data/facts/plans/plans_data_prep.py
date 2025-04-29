@@ -4,7 +4,7 @@ import pandas as pd
 from helpers import clean_kommun
 
 
-PATH_PLANS_DATA = 'facts/plans/klimatplaner.xlsx'
+PATH_PLANS_DATA = "facts/plans/klimatplaner.xlsx"
 
 
 def get_climate_plans(df):
@@ -17,13 +17,12 @@ def get_climate_plans(df):
     df_plans = df_plans.drop(0)  # drop usless rows
     df_plans = df_plans.reset_index(drop=True)
 
-    df_plans['Kommun'] = df_plans['Kommun'].apply(clean_kommun)
+    df_plans["Kommun"] = df_plans["Kommun"].apply(clean_kommun)
 
-    df_plans = df_plans.rename(
-        columns={df_plans.columns[6]: 'cred'})
+    df_plans = df_plans.rename(columns={df_plans.columns[6]: "cred"})
 
-    df_plans = df_plans.where(pd.notnull(df_plans), 'Saknar plan')
+    df_plans = df_plans.where(pd.notnull(df_plans), None)
 
-    df = df.merge(df_plans, on='Kommun', how='left')
+    df = df.merge(df_plans, on="Kommun", how="left")
 
     return df
