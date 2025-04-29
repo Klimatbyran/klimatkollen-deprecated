@@ -46,3 +46,6 @@ __pycache__/
 
 # Intellij
 .idea
+
+# Python caches
+cache_df_get_smhi_data_*

@@ -14,14 +14,20 @@ from issues.emissions.emission_data_calculations import (
     calculate_budget_runs_out,
 )
 from issues.emissions.historical_data_calculations import get_n_prep_data_from_smhi
-from issues.emissions.trend_calculations import calculate_trend_coefficients, calculate_trend
-from issues.emissions.approximated_data_calculations import calculate_approximated_historical
+from issues.emissions.trend_calculations import (
+    calculate_trend_coefficients,
+    calculate_trend,
+)
+from issues.emissions.approximated_data_calculations import (
+    calculate_approximated_historical,
+)
 
 
 LAST_YEAR_WITH_SMHI_DATA = 2021
 CURRENT_YEAR = 2024
 NATIONAL_BUDGET = 80e6
 BUDGET_YEAR = 2024
+
 
 class TestEmissionCalculations(unittest.TestCase):
 
@@ -30,8 +36,21 @@ class TestEmissionCalculations(unittest.TestCase):
 
         df_input = pd.DataFrame(pd.read_excel(path_input_df))
         df_result = get_n_prep_data_from_smhi(df_input)
-        result_columns = df_result.columns.to_list()[4:] # Skip the first 4 columns
-        expected_columns = [1990, 2000, 2005, 2010, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+        result_columns = df_result.columns.to_list()[4:]  # Skip the first 4 columns
+        expected_columns = [
+            1990,
+            2000,
+            2005,
+            2010,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+        ]
 
         # Check that the expected columns are in the dataframe
         assert result_columns == expected_columns
@@ -71,16 +90,26 @@ class TestEmissionCalculations(unittest.TestCase):
         )
 
         cement_deduction = {
-            'Skövde': {
-                2010: 356965000/1000, 2015: 358634000/1000, 2016: 384926000/1000,
-                2017: 407633130/1000, 2018: 445630340/1000, 2019: 440504330/1000,
-                2020: 459092473/1000, 2021: 439174727/1000
+            "Skövde": {
+                2010: 356965000 / 1000,
+                2015: 358634000 / 1000,
+                2016: 384926000 / 1000,
+                2017: 407633130 / 1000,
+                2018: 445630340 / 1000,
+                2019: 440504330 / 1000,
+                2020: 459092473 / 1000,
+                2021: 439174727 / 1000,
             },
-            'Gotland': {
-                2010: 1579811000/1000, 2015: 1926036000/1000, 2016: 1903887000/1000,
-                2017: 1757110000/1000, 2018: 1740412000/1000, 2019: 1536480000/1000,
-                2020: 1624463000/1000, 2021: 1621211000/1000
-            }
+            "Gotland": {
+                2010: 1579811000 / 1000,
+                2015: 1926036000 / 1000,
+                2016: 1903887000 / 1000,
+                2017: 1757110000 / 1000,
+                2018: 1740412000 / 1000,
+                2019: 1536480000 / 1000,
+                2020: 1624463000 / 1000,
+                2021: 1621211000 / 1000,
+            },
         }
 
         df_result = deduct_cement(df_input, cement_deduction)
@@ -137,7 +166,8 @@ class TestEmissionCalculations(unittest.TestCase):
         df_expected["totalApproximatedHistorical"] = [1560788.47673442]
 
         df_result = calculate_approximated_historical(
-            df_input, LAST_YEAR_WITH_SMHI_DATA, CURRENT_YEAR)
+            df_input, LAST_YEAR_WITH_SMHI_DATA, CURRENT_YEAR
+        )
 
         pd.testing.assert_frame_equal(df_result, df_expected, check_exact=False)
 
@@ -227,11 +257,17 @@ class TestEmissionCalculations(unittest.TestCase):
         df_expected["budgetShare"] = [0.12539888902021, 0.87460111097979]
         df_expected["Budget"] = [10031911.1216168, 69968088.8783832]
 
-        df_result = calculate_municipality_budgets(df_input, LAST_YEAR_WITH_SMHI_DATA, CURRENT_YEAR, NATIONAL_BUDGET, BUDGET_YEAR)
+        df_result = calculate_municipality_budgets(
+            df_input,
+            LAST_YEAR_WITH_SMHI_DATA,
+            CURRENT_YEAR,
+            NATIONAL_BUDGET,
+            BUDGET_YEAR,
+        )
 
         pd.testing.assert_frame_equal(df_result, df_expected, check_exact=False)
 
-    def test_calculate_paris_path(self):
+    def test_calculate_paris_path_remaining_budget(self):
         # Sample data frame for Norrköping
         df_input = pd.DataFrame(
             {
@@ -304,7 +340,58 @@ class TestEmissionCalculations(unittest.TestCase):
             }
         ]
 
-        df_result = calculate_paris_path(df_input, LAST_YEAR_WITH_SMHI_DATA, CURRENT_YEAR, BUDGET_YEAR)
+        df_result = calculate_paris_path(
+            df_input, LAST_YEAR_WITH_SMHI_DATA, CURRENT_YEAR, BUDGET_YEAR
+        )
+
+        pd.testing.assert_frame_equal(df_result, df_expected, check_exact=False)
+
+    def test_calculate_paris_path_no_budget(self):
+        # Sample data frame for Norrköping
+        df_input = pd.DataFrame(
+            {
+                "Kommun": ["Norrköping"],
+                "Budget": [-1],
+                "trend": [
+                    {
+                        2024: 504977.43946033716,
+                        2025: 496079.66835255176,
+                        2026: 487181.8972447701,
+                        2027: 478284.1261369847,
+                        2028: 469386.355029203,
+                        2029: 460488.5839214176,
+                        2030: 451590.8128136322,
+                        2031: 442693.0417058505,
+                        2032: 433795.2705980651,
+                        2033: 424897.4994902797,
+                        2034: 415999.728382498,
+                        2035: 407101.9572747126,
+                        2036: 398204.18616693094,
+                        2037: 389306.41505914554,
+                        2038: 380408.64395136014,
+                        2039: 371510.87284357846,
+                        2040: 362613.10173579305,
+                        2041: 353715.33062800765,
+                        2042: 344817.559520226,
+                        2043: 335919.78841244057,
+                        2044: 327022.0173046589,
+                        2045: 318124.2461968735,
+                        2046: 309226.4750890881,
+                        2047: 300328.7039813064,
+                        2048: 291430.932873521,
+                        2049: 282533.1617657356,
+                        2050: 273635.3906579539,
+                    }
+                ],
+            }
+        )
+
+        df_expected = df_input.copy()
+        df_expected["parisPath"] = None
+
+        df_result = calculate_paris_path(
+            df_input, LAST_YEAR_WITH_SMHI_DATA, CURRENT_YEAR, BUDGET_YEAR
+        )
 
         pd.testing.assert_frame_equal(df_result, df_expected, check_exact=False)
 
@@ -326,7 +413,9 @@ class TestEmissionCalculations(unittest.TestCase):
         df_expected = df_input.copy()
         df_expected["historicalEmissionChangePercent"] = [-6.46746990789292]
 
-        df_result = calculate_historical_change_percent(df_input, LAST_YEAR_WITH_SMHI_DATA)
+        df_result = calculate_historical_change_percent(
+            df_input, LAST_YEAR_WITH_SMHI_DATA
+        )
 
         pd.testing.assert_frame_equal(df_result, df_expected, check_exact=False)
 
@@ -335,6 +424,7 @@ class TestEmissionCalculations(unittest.TestCase):
         df_input = pd.DataFrame(
             {
                 "Kommun": ["Jokkmokk"],
+                "Budget": 1e10,
                 "parisPath": [
                     {
                         2024: 22187.783636475913,
@@ -376,6 +466,52 @@ class TestEmissionCalculations(unittest.TestCase):
 
         pd.testing.assert_frame_equal(df_result, df_expected, check_exact=False)
 
+        # Sample data frame for Jokkmokk
+        df_input = pd.DataFrame(
+            {
+                "Kommun": ["Jokkmokk"],
+                "Budget": -1,
+                "parisPath": [
+                    {
+                        2024: 22187.783636475913,
+                        2025: 16425.542706550976,
+                        2026: 12159.77483939365,
+                        2027: 9001.841022018716,
+                        2028: 6664.033080874027,
+                        2029: 4933.361608404003,
+                        2030: 3652.15125193863,
+                        2031: 2703.675470355793,
+                        2032: 2001.5219920378186,
+                        2033: 1481.7200986344162,
+                        2034: 1096.9124793187386,
+                        2035: 812.0406738047835,
+                        2036: 601.1510201095242,
+                        2037: 445.0301082647478,
+                        2038: 329.4543145348899,
+                        2039: 243.893937398689,
+                        2040: 180.55387371026865,
+                        2041: 133.66343443992008,
+                        2042: 98.95059762020891,
+                        2043: 73.25279954404822,
+                        2044: 54.22880477828064,
+                        2045: 40.14540448945623,
+                        2046: 29.71950992118386,
+                        2047: 22.001254718639636,
+                        2048: 16.287455966742968,
+                        2049: 12.05754968346613,
+                        2050: 8.92616407781006,
+                    }
+                ],
+            }
+        )
+
+        df_expected = df_input.copy()
+        df_expected["neededEmissionChangePercent"] = None
+
+        df_result = calculate_needed_change_percent(df_input, CURRENT_YEAR, BUDGET_YEAR)
+
+        pd.testing.assert_frame_equal(df_result, df_expected, check_exact=False)
+
     def test_calculate_hit_net_zero(self):
         # Sample DataFrame for municipalitis 'Ale' and 'Alingsås'
         df_input = pd.DataFrame(
@@ -389,7 +525,7 @@ class TestEmissionCalculations(unittest.TestCase):
         )
 
         df_expected = df_input.copy()
-        df_expected["hitNetZero"] = ["Aldrig", datetime.date(2054, 6, 13)]
+        df_expected["hitNetZero"] = [None, datetime.date(2054, 6, 13)]
 
         df_result = calculate_hit_net_zero(df_input, LAST_YEAR_WITH_SMHI_DATA)
 
