@@ -7,7 +7,7 @@ from typing import Any, Dict, List
 import numpy as np
 import pandas as pd
 
-from solutions.cars.electric_car_change_rate import get_electric_car_change_rate
+from solutions.cars.ev_change_rate import get_ev_change_rate
 from solutions.cars.electric_vehicle_per_charge_points import (
     get_electric_vehicle_per_charge_points,
 )
@@ -30,7 +30,7 @@ def create_dataframe(to_percentage: bool) -> pd.DataFrame:
     df = emission_calculations(df)
     print("2. Climate data and calculations added")
 
-    df = get_electric_car_change_rate(df, to_percentage)
+    df = get_ev_change_rate(df, to_percentage)
     print("3. Hybrid car data and calculations added")
 
     df = get_climate_plans(df)
@@ -78,19 +78,18 @@ def series_to_dict(row: pd.Series, numeric_columns: List[Any]) -> Dict:
         "neededEmissionChangePercent": row["neededEmissionChangePercent"],
         "hitNetZero": row["hitNetZero"],
         "budgetRunsOut": row["budgetRunsOut"],
-        "electricCarChangePercent": row["electricCarChangePercent"],
-        "electricCarChangeYearly": row["electricCarChangeYearly"],
+        "electricCarChangePercent": row["evChangeRate"],
+        "electricCarChangeYearly": row["evChangeYearly"],
         "climatePlanLink": row["Länk till aktuell klimatplan"],
         "climatePlanYear": row["Antagen år"],
         "climatePlanComment": row["Namn, giltighetsår, kommentar"],
         "bicycleMetrePerCapita": row["bikeMetrePerCapita"],
-        "totalConsumptionEmission": row["Total emissions"] / 1000,
-        "electricVehiclePerChargePoints": (
-            row["EVPC"] if pd.notna(row["EVPC"]) else None
-        ),
+        "totalConsumptionEmission": row["Total emissions"],
+        "electricVehiclePerChargePoints": row["EVPC"],
         "procurementScore": row["procurementScore"],
         "procurementLink": row["procurementLink"],
     }
+
 
 def round_processing(v, num_decimals: int):
     new_v = v
