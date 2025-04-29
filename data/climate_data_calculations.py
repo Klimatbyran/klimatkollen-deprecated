@@ -92,7 +92,6 @@ def series_to_dict(row: pd.Series, numeric_columns: List[Any]) -> Dict:
         "procurementLink": row["procurementLink"],
     }
 
-
 def round_processing(v, num_decimals: int):
     new_v = v
     if isinstance(v, float):
