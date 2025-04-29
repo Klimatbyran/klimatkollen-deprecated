@@ -85,7 +85,9 @@ def series_to_dict(row: pd.Series, numeric_columns: List[Any]) -> Dict:
         "climatePlanComment": row["Namn, giltighetsår, kommentar"],
         "bicycleMetrePerCapita": row["bikeMetrePerCapita"],
         "totalConsumptionEmission": row["Total emissions"],
-        "electricVehiclePerChargePoints": row["EVPC"],
+        "electricVehiclePerChargePoints": (
+            row["EVPC"] if pd.notna(row["EVPC"]) else None
+        ),
         "procurementScore": row["procurementScore"],
         "procurementLink": row["procurementLink"],
     }
