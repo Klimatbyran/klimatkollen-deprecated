@@ -23,35 +23,44 @@ from issues.consumption.consumption_data_calculations import get_consumption_emi
 
 
 def create_dataframe(to_percentage: bool) -> pd.DataFrame:
-    # Get emission calculations
-    df = get_municipalities()
+    """
+    Creates a DataFrame with climate data for Swedish municipalities.
+
+    Args:
+        to_percentage (bool): Whether to convert values to percentages
+
+    Returns:
+        pd.DataFrame: DataFrame containing climate data for municipalities
+    """
+
+    municipality_df = get_municipalities()
     print("1. Municipalities loaded and prepped")
 
-    df = emission_calculations(df)
+    municipality_df = emission_calculations(municipality_df)
     print("2. Climate data and calculations added")
 
-    df = get_ev_change_rate(df, to_percentage)
+    municipality_df = get_ev_change_rate(municipality_df, to_percentage)
     print("3. Hybrid car data and calculations added")
 
-    df = get_climate_plans(df)
+    municipality_df = get_climate_plans(municipality_df)
     print("4. Climate plans added")
 
     df_bike_lanes = calculate_bike_lane_per_capita()
-    df = df.merge(df_bike_lanes, on="Kommun", how="left")
+    municipality_df = municipality_df.merge(df_bike_lanes, on="Kommun", how="left")
     print("5. Bicycle data added")
 
-    df = get_consumption_emissions(df)
+    municipality_df = get_consumption_emissions(municipality_df)
     print("6. Consumption emission data added")
 
     df_evpc = get_electric_vehicle_per_charge_points()
-    df = df.merge(df_evpc, on="Kommun", how="left")
+    municipality_df = municipality_df.merge(df_evpc, on="Kommun", how="left")
     print("7. CPEV for December 2023 added")
 
     df_procurements = get_procurement_data()
-    df = df.merge(df_procurements, on="Kommun", how="left")
+    municipality_df = municipality_df.merge(df_procurements, on="Kommun", how="left")
     print("8. Climate requirements in procurements added")
 
-    return df
+    return municipality_df
 
 
 def series_to_dict(row: pd.Series, numeric_columns: List[Any]) -> Dict:
@@ -93,31 +102,68 @@ def series_to_dict(row: pd.Series, numeric_columns: List[Any]) -> Dict:
     }
 
 
-def round_processing(v, num_decimals: int):
-    new_v = v
-    if isinstance(v, float):
-        new_v = np.round(v, num_decimals)
-    elif isinstance(v, dict):
-        new_v = {k: round_processing(a, num_decimals) for k, a in v.items()}
-    return new_v
+def round_processing(value, num_decimals: int):
+    """
+    Rounds numeric values to specified decimal places, handling both floats and nested dictionaries.
+
+    Args:
+        v: Value to round (float or dict)
+        num_decimals (int): Number of decimal places
+
+    Returns:
+        Rounded value of the same type as input
+    """
+
+    new_value = value
+    if isinstance(value, float):
+        new_value = np.round(value, num_decimals)
+    elif isinstance(value, dict):
+        new_value = {k: round_processing(a, num_decimals) for k, a in value.items()}
+    return new_value
 
 
 def max_decimals(entry: Dict, num_decimals: int) -> Dict:
+    """
+    Rounds numeric values in a dictionary to specified decimal places.
+
+    Args:
+        entry: Dictionary containing numeric values
+        num_decimals (int): Number of decimal places
+
+    Returns:
+        Dictionary with rounded numeric values
+    """
+
     return {k: round_processing(v, num_decimals) for k, v in entry.items()}
 
 
-def df_to_dict(df: pd.DataFrame, num_decimals: int) -> dict:
-    numeric_columns = [col for col in df.columns if str(col).isdigit()]
+def df_to_dict(df_to_convert: pd.DataFrame, num_decimals: int) -> dict:
+    """
+    Converts DataFrame to a list of dictionaries with optional decimal rounding.
 
-    temp = []
-    if num_decimals >= 0:
-        temp = [
-            max_decimals(series_to_dict(df.iloc[i], numeric_columns), num_decimals)
-            for i in range(len(df))
+    Args:
+        df (pd.DataFrame): Input DataFrame
+        num_decimals (int): Number of decimal places to round to (-1 for no rounding)
+
+    Returns:
+        list: List of dictionaries containing municipality data
+    """
+
+    numeric_columns = [col for col in df_to_convert.columns if str(col).isdigit()]
+
+    return (
+        [
+            max_decimals(
+                series_to_dict(df_to_convert.iloc[i], numeric_columns), num_decimals
+            )
+            for i in range(len(df_to_convert))
         ]
-    else:
-        temp = [series_to_dict(df.iloc[i], numeric_columns) for i in range(len(df))]
-    return temp
+        if num_decimals >= 0
+        else [
+            series_to_dict(df_to_convert.iloc[i], numeric_columns)
+            for i in range(len(df_to_convert))
+        ]
+    )
 
 
 if __name__ == "__main__":
