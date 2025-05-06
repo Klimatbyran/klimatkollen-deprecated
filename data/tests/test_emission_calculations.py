@@ -50,9 +50,12 @@ class TestEmissionCalculations(unittest.TestCase):
             2020,
             2021,
             2022,
+            2023,
         ]
 
-        # Check that the expected columns are in the dataframe
+        if result_columns != expected_columns:
+            print("result_columns:", result_columns)
+            print("expected_columns:", expected_columns)
         assert result_columns == expected_columns
 
         # Each of the column values should all be greater than 0.0
