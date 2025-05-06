@@ -50,6 +50,7 @@ class TestEmissionCalculations(unittest.TestCase):
             2020,
             2021,
             2022,
+            2023,
         ]
 
         # Check that the expected columns are in the dataframe
