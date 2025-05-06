@@ -31,12 +31,8 @@ def get_consumption_emissions(df):
             # Rename keys
             properties["Kommun"] = properties.pop("kom_namn")
 
-            total_emissions_list.append(
-                {
-                    "Kommun": properties["Kommun"],
-                    "Konsumtionsutsläpp (ton/person/år)": properties["Total emissions"],
-                }
-            )
+            # Convert total emissions to tons
+            properties["Total emissions (tons)"] = properties["Total emissions"] / 1000
 
             # Remove unwanted 'geoid' and 'län' key
             properties.pop("geoid", None)
