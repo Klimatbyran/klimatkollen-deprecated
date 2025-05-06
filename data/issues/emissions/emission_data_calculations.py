@@ -20,7 +20,7 @@ YEAR_SECONDS = 60 * 60 * 24 * 365  # a year in seconds
 
 
 LAST_YEAR_WITH_SMHI_DATA = (
-    2022  # last year for which the National Emission database has data
+    2023  # last year for which the National Emission database has data
 )
 PATH_SMHI = "https://nationellaemissionsdatabasen.smhi.se/api/getexcelfile/?county=0&municipality=0&sub=CO2"
 
@@ -59,6 +59,7 @@ CEMENT_DEDUCTION = {
         2020: 0,
         2021: 0,
         2022: 0,
+        2023: 0,
     },
     "Skövde": {
         2010: 356965000 / 1000,
@@ -70,6 +71,7 @@ CEMENT_DEDUCTION = {
         2020: 459092473 / 1000,
         2021: 439174727 / 1000,
         2022: 406856000 / 1000,
+        2023: 340611000 / 1000,
     },
     "Gotland": {
         2010: 1579811000 / 1000,
@@ -81,6 +83,7 @@ CEMENT_DEDUCTION = {
         2020: 1624463000 / 1000,
         2021: 1621211000 / 1000,
         2022: 1514132000 / 1000,
+        2023: 1511971000 / 1000,
     },
 }
 
