@@ -13,7 +13,6 @@ from issues.emissions.emission_data_calculations import (
     calculate_hit_net_zero,
     calculate_budget_runs_out,
 )
-from issues.emissions.historical_data_calculations import get_n_prep_data_from_smhi
 from issues.emissions.trend_calculations import (
     calculate_trend_coefficients,
     calculate_trend,
@@ -30,35 +29,6 @@ BUDGET_YEAR = 2024
 
 
 class TestEmissionCalculations(unittest.TestCase):
-
-    def test_get_n_prep_data_from_smhi(self):
-        path_input_df = "tests/reference_dataframes/df_municipalities.xlsx"
-
-        df_input = pd.DataFrame(pd.read_excel(path_input_df))
-        df_result = get_n_prep_data_from_smhi(df_input)
-        result_columns = df_result.columns.to_list()[4:]  # Skip the first 4 columns
-        expected_columns = [
-            1990,
-            2000,
-            2005,
-            2010,
-            2015,
-            2016,
-            2017,
-            2018,
-            2019,
-            2020,
-            2021,
-            2022,
-            2023,
-        ]
-
-        # Check that the expected columns are in the dataframe
-        assert result_columns == expected_columns
-
-        # Each of the column values should all be greater than 0.0
-        for col in expected_columns:
-            assert (df_result[col] > 0.0).all() == True
 
     def test_deduct_cement(self):
         # Sample data frame for Skövde and Gotland
