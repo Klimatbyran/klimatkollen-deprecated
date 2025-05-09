@@ -133,13 +133,13 @@ if __name__ == "__main__":
         "-t",
         "--to_percentage",
         action="store_true",
-        default=False,
+        default=True,
         help="Convert to percentages",
     )
     parser.add_argument(
         "-n",
         "--num_decimals",
-        default=-1,
+        default=2,
         type=int,
         help="Number of decimals to round to",
     )
