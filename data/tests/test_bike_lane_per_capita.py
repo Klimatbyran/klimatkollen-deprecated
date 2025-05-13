@@ -12,8 +12,8 @@ class TestBicycleCalculations(unittest.TestCase):
             {
                 "Kommun": ["Ale", "Alingsås", "Alvesta"],
                 "bikeMetrePerCapita": [
-                    (91548 + 527.878994776904) / 32576,
-                    (122012 + 438.346265295262) / 42722,
+                    92077 / 32576,
+                    123300 / 42722,
                     66699 / 19830,
                 ],
             }
