@@ -33,7 +33,7 @@ def get_smhi_data(path=PATH_SMHI):
     return df_raw
 
 
-def extract_sector_data(df):
+def extract_sector_data(input_df):
     """
     Extracts sector emissions.
 
@@ -45,16 +45,16 @@ def extract_sector_data(df):
     """
 
     df_sectors = pd.DataFrame()
-    sectors = set(df["Huvudsektor"])
+    sectors = set(input_df["Huvudsektor"])
     sectors -= {"Alla"}
     first_sector = list(sectors)[0]
 
     for sector in sectors:
-        df_sector = df[
-            (df["Huvudsektor"] == sector)
-            & (df["Undersektor"] == "Alla")
-            & (df["Län"] != "Alla")
-            & (df["Kommun"] != "Alla")
+        df_sector = input_df[
+            (input_df["Huvudsektor"] == sector)
+            & (input_df["Undersektor"] == "Alla")
+            & (input_df["Län"] != "Alla")
+            & (input_df["Kommun"] != "Alla")
         ]
         df_sector.reset_index(drop=True)
 
@@ -81,7 +81,7 @@ def extract_sector_data(df):
     return df_sectors
 
 
-def get_n_prep_data_from_smhi(df):
+def get_n_prep_data_from_smhi(input_df):
     """
     Retrieves and prepares municipality CO2 emission data from SMHI.
 
@@ -108,13 +108,10 @@ def get_n_prep_data_from_smhi(df):
     df_total = df_total.reset_index(drop=True)
 
     # Remove said columns
-    df_total = df_total.drop(columns=["Huvudsektor", "Undersektor", "Län"])
+    df_total = df_total.drop(columns=["Huvudsektor", "Undersektor"])
     df_total = df_total.sort_values(by=["Kommun"])  # sort by Kommun
     df_total = df_total.reset_index(drop=True)
 
-    df = df.merge(df_total, on="Kommun", how="left")
+    input_df = input_df.merge(df_total, on="Kommun", how="left")
 
-    # Uncomment below when sector emissions are to be introduced
-    df_merge = df_total.merge(df_sectors, on="Kommun", how="left")
-
-    return df_merge
+    return df_total.merge(df_sectors, on="Kommun", how="left")
