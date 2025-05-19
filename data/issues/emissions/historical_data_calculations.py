@@ -2,8 +2,10 @@ import pandas as pd
 
 from .cache_utilities import cache_df
 
-PATH_SMHI = 'https://nationellaemissionsdatabasen.smhi.se/' + \
-    'api/getexcelfile/?county=0&municipality=0&sub=CO2'
+PATH_SMHI = (
+    "https://nationellaemissionsdatabasen.smhi.se/"
+    + "api/getexcelfile/?county=0&municipality=0&sub=CO2"
+)
 
 
 @cache_df(path=PATH_SMHI)
@@ -43,16 +45,17 @@ def extract_sector_data(df):
     """
 
     df_sectors = pd.DataFrame()
-    sectors = set(df['Huvudsektor'])
-    sectors -= {'Alla'}
+    sectors = set(df["Huvudsektor"])
+    sectors -= {"Alla"}
     first_sector = list(sectors)[0]
 
     for sector in sectors:
         df_sector = df[
-            (df['Huvudsektor'] == sector)
-            & (df['Undersektor'] == 'Alla')
-            & (df['Län'] != 'Alla')
-            & (df['Kommun'] != 'Alla')]
+            (df["Huvudsektor"] == sector)
+            & (df["Undersektor"] == "Alla")
+            & (df["Län"] != "Alla")
+            & (df["Kommun"] != "Alla")
+        ]
         df_sector.reset_index(drop=True)
 
         first_row = df_sector.iloc[0]
@@ -65,13 +68,15 @@ def extract_sector_data(df):
             df_sector_copy.rename(columns={col: new_col_name}, inplace=True)
 
         # Drop unnecessary columns
-        df_sector_copy = df_sector_copy.drop(columns=['Huvudsektor', 'Undersektor', 'Län'])
+        df_sector_copy = df_sector_copy.drop(
+            columns=["Huvudsektor", "Undersektor", "Län"]
+        )
 
         # Merge df_sector_copy with df_sectors
         if sector == first_sector:  # edge case for first sector
             df_sectors = df_sector_copy
         else:
-            df_sectors = df_sectors.merge(df_sector_copy, on='Kommun', how='left')
+            df_sectors = df_sectors.merge(df_sector_copy, on="Kommun", how="left")
 
     return df_sectors
 
@@ -91,23 +96,25 @@ def get_n_prep_data_from_smhi(df):
 
     # Uncomment below when sector emissions are to be introduced
     # Extract sector data from the SMHI data
-    # df_sectors = extract_sector_data(df_raw)
+    df_sectors = extract_sector_data(df_raw)
 
     # Extract total emissions from the SMHI data
-    df_total = df_raw[(df_raw['Huvudsektor'] == 'Alla')
-                    & (df_raw['Undersektor'] == 'Alla')
-                    & (df_raw['Län'] != 'Alla')
-                    & (df_raw['Kommun'] != 'Alla')]
+    df_total = df_raw[
+        (df_raw["Huvudsektor"] == "Alla")
+        & (df_raw["Undersektor"] == "Alla")
+        & (df_raw["Län"] != "Alla")
+        & (df_raw["Kommun"] != "Alla")
+    ]
     df_total = df_total.reset_index(drop=True)
 
     # Remove said columns
-    df_total = df_total.drop(columns=['Huvudsektor', 'Undersektor', 'Län'])
-    df_total = df_total.sort_values(by=['Kommun'])  # sort by Kommun
+    df_total = df_total.drop(columns=["Huvudsektor", "Undersektor", "Län"])
+    df_total = df_total.sort_values(by=["Kommun"])  # sort by Kommun
     df_total = df_total.reset_index(drop=True)
 
-    df = df.merge(df_total, on='Kommun', how='left')
+    df = df.merge(df_total, on="Kommun", how="left")
 
     # Uncomment below when sector emissions are to be introduced
-    # df_merge = df_total.merge(df_sectors, on='Kommun', how='left')
+    df_merge = df_total.merge(df_sectors, on="Kommun", how="left")
 
-    return df
+    return df_merge

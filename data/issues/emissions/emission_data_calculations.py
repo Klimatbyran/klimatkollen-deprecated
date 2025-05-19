@@ -1,7 +1,7 @@
 # pylint: disable=invalid-name
 # -*- coding: utf-8 -*-
 
-import datetime
+from datetime import datetime
 from dateutil.relativedelta import relativedelta
 import numpy as np
 
@@ -348,7 +348,7 @@ def calculate_hit_net_zero(df, last_year_in_range):
             temp_f = -fit[1] / fit[0]  # Find where the line cross the x-axis
             # Initiate the first day of our starting point date.
             # Start at last_year+1 since the line can go up between last_year and last_year+1
-            my_date = datetime.datetime(int(last_year + 1), 1, 1, 0, 0, 0)
+            my_date = datetime(int(last_year + 1), 1, 1, 0, 0, 0)
             # Add the length between the starting date and the net zero date
             # to the starting date to get the date when net zero is reached
             temp.append(
@@ -422,7 +422,7 @@ def calculate_budget_runs_out(df, current_year, budget_year):
             ) / (fit[0])
 
             # Initiate the first day of our starting point date
-            my_date = datetime.datetime(start_year_after_correction, 1, 1, 0, 0, 0)
+            my_date = datetime(start_year_after_correction, 1, 1, 0, 0, 0)
             # Calculate the time diff between starting date and point in time where budget runs out
             time_diff_in_years = x - (start_year_after_correction)
             time_diff_in_seconds = int(time_diff_in_years * YEAR_SECONDS)

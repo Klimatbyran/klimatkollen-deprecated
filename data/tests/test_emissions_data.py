@@ -29,8 +29,6 @@ class TestEmissionData(unittest.TestCase):
             & (df_full_dataset["Huvudsektor"] == "Alla")
         ][["Kommun", 2022, 2023]].reset_index(drop=True)
 
-        print(df_result.head())
-
         df_expected = pd.DataFrame(
             {
                 "Kommun": ["Ale", "Skövde"],
@@ -42,12 +40,15 @@ class TestEmissionData(unittest.TestCase):
         pd.testing.assert_frame_equal(df_result, df_expected)
 
     def test_get_n_prep_data_from_smhi(self):
-        """Test that the N-prep data has the correct columns and positive values."""
+        """Test that the SMHI data contains the expected year range (to catch updates)
+        and all positive values for that range."""
         path_input_df = "tests/reference_dataframes/df_municipalities.xlsx"
 
         df_input = pd.DataFrame(pd.read_excel(path_input_df))
         df_result = get_n_prep_data_from_smhi(df_input)
-        result_columns = df_result.columns.to_list()[4:]  # Skip the first 4 columns
+        # Only check for numerical columns since that will tell if the data
+        # has been updated with an entry for a new year
+        result_columns = [col for col in df_result.columns if str(col).isdigit()]
         expected_columns = [
             1990,
             2000,
@@ -63,10 +64,10 @@ class TestEmissionData(unittest.TestCase):
             2022,
             2023,
         ]
+        print(result_columns)
 
         # Check that the expected columns are in the dataframe
         assert result_columns == expected_columns
 
         # Each of the column values should all be greater than 0.0
-        for col in expected_columns:
-            assert (df_result[col] > 0.0).all() == True
+        assert (df_result[expected_columns] > 0.0).all().all()
