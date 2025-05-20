@@ -23,35 +23,42 @@ from issues.consumption.consumption_data_calculations import get_consumption_emi
 
 
 def create_dataframe(to_percentage: bool) -> pd.DataFrame:
-    # Get emission calculations
-    df = get_municipalities()
+    """Create a comprehensive climate dataframe by merging multiple data sources"""
+
+    municipalities_df = get_municipalities()
     print("1. Municipalities loaded and prepped")
 
-    df = emission_calculations(df)
+    emissions_df = emission_calculations(municipalities_df)
     print("2. Climate data and calculations added")
 
-    df = get_ev_change_rate(df, to_percentage)
+    ev_change_rate_df = get_ev_change_rate(emissions_df, to_percentage)
     print("3. Hybrid car data and calculations added")
 
-    df = get_climate_plans(df)
+    climate_plans_df = get_climate_plans(ev_change_rate_df)
     print("4. Climate plans added")
 
-    df_bike_lanes = calculate_bike_lane_per_capita()
-    df = df.merge(df_bike_lanes, on="Kommun", how="left")
+    bike_lane_df = calculate_bike_lane_per_capita()
+    climate_plans_with_bike_df = climate_plans_df.merge(
+        bike_lane_df, on="Kommun", how="left"
+    )
     print("5. Bicycle data added")
 
-    df = get_consumption_emissions(df)
+    consumption_emissions_df = get_consumption_emissions(climate_plans_with_bike_df)
     print("6. Consumption emission data added")
 
-    df_evpc = get_electric_vehicle_per_charge_points()
-    df = df.merge(df_evpc, on="Kommun", how="left")
+    evpc_df = get_electric_vehicle_per_charge_points()
+    consumption_emissions_with_evpc_df = consumption_emissions_df.merge(
+        evpc_df, on="Kommun", how="left"
+    )
     print("7. CPEV for December 2023 added")
 
-    df_procurements = get_procurement_data()
-    df = df.merge(df_procurements, on="Kommun", how="left")
+    procurement_df = get_procurement_data()
+    result_df = consumption_emissions_with_evpc_df.merge(
+        procurement_df, on="Kommun", how="left"
+    )
     print("8. Climate requirements in procurements added")
 
-    return df
+    return result_df
 
 
 def series_to_dict(row: pd.Series, numeric_columns: List[Any]) -> Dict:
@@ -64,6 +71,7 @@ def series_to_dict(row: pd.Series, numeric_columns: List[Any]) -> Dict:
     Returns:
     A dictionary with the transformed data.
     """
+
     return {
         "name": row["Kommun"],
         "region": row["Län"],
@@ -106,18 +114,20 @@ def max_decimals(entry: Dict, num_decimals: int) -> Dict:
     return {k: round_processing(v, num_decimals) for k, v in entry.items()}
 
 
-def df_to_dict(df: pd.DataFrame, num_decimals: int) -> dict:
-    numeric_columns = [col for col in df.columns if str(col).isdigit()]
+def df_to_dict(input_df: pd.DataFrame, num_decimals: int) -> dict:
+    """Convert dataframe to list of dictionaries with optional decimal rounding."""
+    numeric_columns = [col for col in input_df.columns if str(col).isdigit()]
 
-    temp = []
-    if num_decimals >= 0:
-        temp = [
-            max_decimals(series_to_dict(df.iloc[i], numeric_columns), num_decimals)
-            for i in range(len(df))
-        ]
-    else:
-        temp = [series_to_dict(df.iloc[i], numeric_columns) for i in range(len(df))]
-    return temp
+    return [
+        (
+            max_decimals(
+                series_to_dict(input_df.iloc[i], numeric_columns), num_decimals
+            )
+            if num_decimals >= 0
+            else series_to_dict(input_df.iloc[i], numeric_columns)
+        )
+        for i in range(len(input_df))
+    ]
 
 
 if __name__ == "__main__":
