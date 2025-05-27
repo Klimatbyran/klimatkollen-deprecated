@@ -1,0 +1,56 @@
+[
+  {
+    "code": "22",
+    "name": "Västernorrlands län",
+    "emissions": "5538",
+    "population": 243265
+  },
+  {
+    "code": "SE",
+    "name": "Sverige",
+    "emissions": "5562",
+    "population": 10521556
+  },
+  {
+    "code": "2281",
+    "name": "Sundsvall",
+    "emissions": "5763",
+    "population": 99361
+  },
+  {
+    "code": "2284",
+    "name": "Örnsköldsvik",
+    "emissions": "5479",
+    "population": 55557
+  },
+  {
+    "code": "2280",
+    "name": "Härnösand",
+    "emissions": "5456",
+    "population": 24879
+  },
+  {
+    "code": "2260",
+    "name": "Ånge",
+    "emissions": "5334",
+    "population": 9143
+  },
+  {
+    "code": "2262",
+    "name": "Timrå",
+    "emissions": "5297",
+    "population": 17754
+  },
+  {
+    "code": "2282",
+    "name": "Kramfors",
+    "emissions": "5265",
+    "population": 17904
+  },
+  {
+    "code": "2283",
+    "name": "Sollefteå",
+    "emissions": "5219",
+    "population": 18667
+  }
+]

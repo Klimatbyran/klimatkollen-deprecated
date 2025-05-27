@@ -1,0 +1,104 @@
+[
+  {
+    "code": "20",
+    "name": "Dalarnas län",
+    "emissions": "5471",
+    "population": 288310
+  },
+  {
+    "code": "SE",
+    "name": "Sverige",
+    "emissions": "5562",
+    "population": 10521556
+  },
+  {
+    "code": "2084",
+    "name": "Avesta",
+    "emissions": "5696",
+    "population": 22932
+  },
+  {
+    "code": "2081",
+    "name": "Borlänge",
+    "emissions": "5594",
+    "population": 52178
+  },
+  {
+    "code": "2062",
+    "name": "Mora",
+    "emissions": "5588",
+    "population": 20679
+  },
+  {
+    "code": "2023",
+    "name": "Malung-Sälen",
+    "emissions": "5583",
+    "population": 10258
+  },
+  {
+    "code": "2031",
+    "name": "Rättvik",
+    "emissions": "5562",
+    "population": 11092
+  },
+  {
+    "code": "2061",
+    "name": "Smedjebacken",
+    "emissions": "5521",
+    "population": 10922
+  },
+  {
+    "code": "2083",
+    "name": "Hedemora",
+    "emissions": "5516",
+    "population": 15443
+  },
+  {
+    "code": "2080",
+    "name": "Falun",
+    "emissions": "5416",
+    "population": 59818
+  },
+  {
+    "code": "2026",
+    "name": "Gagnef",
+    "emissions": "5398",
+    "population": 10499
+  },
+  {
+    "code": "2039",
+    "name": "Älvdalen",
+    "emissions": "5374",
+    "population": 7018
+  },
+  {
+    "code": "2029",
+    "name": "Leksand",
+    "emissions": "5367",
+    "population": 16113
+  },
+  {
+    "code": "2082",
+    "name": "Säter",
+    "emissions": "5356",
+    "population": 11271
+  },
+  {
+    "code": "2021",
+    "name": "Vansbro",
+    "emissions": "5285",
+    "population": 6800
+  },
+  {
+    "code": "2034",
+    "name": "Orsa",
+    "emissions": "5222",
+    "population": 6934
+  },
+  {
+    "code": "2085",
+    "name": "Ludvika",
+    "emissions": "5211",
+    "population": 26353
+  }
+]

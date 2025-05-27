@@ -1,0 +1,44 @@
+[
+  {
+    "code": "10",
+    "name": "Blekinge län",
+    "emissions": "5300",
+    "population": 158740
+  },
+  {
+    "code": "SE",
+    "name": "Sverige",
+    "emissions": "5562",
+    "population": 10521556
+  },
+  {
+    "code": "1080",
+    "name": "Karlskrona",
+    "emissions": "5380",
+    "population": 66682
+  },
+  {
+    "code": "1081",
+    "name": "Ronneby",
+    "emissions": "5321",
+    "population": 29169
+  },
+  {
+    "code": "1060",
+    "name": "Olofström",
+    "emissions": "5282",
+    "population": 13159
+  },
+  {
+    "code": "1083",
+    "name": "Sölvesborg",
+    "emissions": "5278",
+    "population": 17514
+  },
+  {
+    "code": "1082",
+    "name": "Karlshamn",
+    "emissions": "5136",
+    "population": 32216
+  }
+]

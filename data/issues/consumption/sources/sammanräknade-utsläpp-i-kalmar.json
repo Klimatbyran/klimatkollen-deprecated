@@ -1,0 +1,86 @@
+[
+  {
+    "code": "08",
+    "name": "Kalmar län",
+    "emissions": "5309",
+    "population": 247711
+  },
+  {
+    "code": "SE",
+    "name": "Sverige",
+    "emissions": "5562",
+    "population": 10521556
+  },
+  {
+    "code": "0881",
+    "name": "Nybro",
+    "emissions": "5718",
+    "population": 20303
+  },
+  {
+    "code": "0883",
+    "name": "Västervik",
+    "emissions": "5513",
+    "population": 36650
+  },
+  {
+    "code": "0885",
+    "name": "Borgholm",
+    "emissions": "5351",
+    "population": 10857
+  },
+  {
+    "code": "0834",
+    "name": "Torsås",
+    "emissions": "5346",
+    "population": 7042
+  },
+  {
+    "code": "0840",
+    "name": "Mörbylånga",
+    "emissions": "5328",
+    "population": 15985
+  },
+  {
+    "code": "0861",
+    "name": "Mönsterås",
+    "emissions": "5318",
+    "population": 13276
+  },
+  {
+    "code": "0862",
+    "name": "Emmaboda",
+    "emissions": "5261",
+    "population": 9347
+  },
+  {
+    "code": "0860",
+    "name": "Hultsfred",
+    "emissions": "5238",
+    "population": 14064
+  },
+  {
+    "code": "0882",
+    "name": "Oskarshamn",
+    "emissions": "5204",
+    "population": 27028
+  },
+  {
+    "code": "0880",
+    "name": "Kalmar",
+    "emissions": "5193",
+    "population": 72018
+  },
+  {
+    "code": "0821",
+    "name": "Högsby",
+    "emissions": "5136",
+    "population": 5584
+  },
+  {
+    "code": "0884",
+    "name": "Vimmerby",
+    "emissions": "5101",
+    "population": 15557
+  }
+]

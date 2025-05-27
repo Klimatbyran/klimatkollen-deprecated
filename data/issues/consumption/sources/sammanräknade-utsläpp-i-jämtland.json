@@ -1,0 +1,62 @@
+[
+  {
+    "code": "23",
+    "name": "Jämtlands län",
+    "emissions": "5281",
+    "population": 132670
+  },
+  {
+    "code": "SE",
+    "name": "Sverige",
+    "emissions": "5562",
+    "population": 10521556
+  },
+  {
+    "code": "2321",
+    "name": "Åre",
+    "emissions": "5493",
+    "population": 12330
+  },
+  {
+    "code": "2361",
+    "name": "Härjedalen",
+    "emissions": "5375",
+    "population": 10185
+  },
+  {
+    "code": "2309",
+    "name": "Krokom",
+    "emissions": "5333",
+    "population": 15532
+  },
+  {
+    "code": "2303",
+    "name": "Ragunda",
+    "emissions": "5325",
+    "population": 5174
+  },
+  {
+    "code": "2313",
+    "name": "Strömsund",
+    "emissions": "5293",
+    "population": 11397
+  },
+  {
+    "code": "2305",
+    "name": "Bräcke",
+    "emissions": "5272",
+    "population": 6162
+  },
+  {
+    "code": "2326",
+    "name": "Berg",
+    "emissions": "5267",
+    "population": 7176
+  },
+  {
+    "code": "2380",
+    "name": "Östersund",
+    "emissions": "5211",
+    "population": 64714
+  }
+]

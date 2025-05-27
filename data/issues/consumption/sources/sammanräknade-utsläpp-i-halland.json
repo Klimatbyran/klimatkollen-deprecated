@@ -1,0 +1,50 @@
+[
+  {
+    "code": "13",
+    "name": "Hallands län",
+    "emissions": "5598",
+    "population": 342805
+  },
+  {
+    "code": "SE",
+    "name": "Sverige",
+    "emissions": "5562",
+    "population": 10521556
+  },
+  {
+    "code": "1315",
+    "name": "Hylte",
+    "emissions": "5976",
+    "population": 10464
+  },
+  {
+    "code": "1380",
+    "name": "Halmstad",
+    "emissions": "5843",
+    "population": 105148
+  },
+  {
+    "code": "1384",
+    "name": "Kungsbacka",
+    "emissions": "5799",
+    "population": 85801
+  },
+  {
+    "code": "1383",
+    "name": "Varberg",
+    "emissions": "5322",
+    "population": 67800
+  },
+  {
+    "code": "1381",
+    "name": "Laholm",
+    "emissions": "5232",
+    "population": 26575
+  },
+  {
+    "code": "1382",
+    "name": "Falkenberg",
+    "emissions": "5207",
+    "population": 47017
+  }
+]

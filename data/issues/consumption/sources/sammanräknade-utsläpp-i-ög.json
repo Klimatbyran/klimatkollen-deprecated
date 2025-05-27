@@ -1,0 +1,92 @@
+[
+  {
+    "code": "05",
+    "name": "Östergötlands län",
+    "emissions": "5583",
+    "population": 471912
+  },
+  {
+    "code": "SE",
+    "name": "Sverige",
+    "emissions": "5562",
+    "population": 10521556
+  },
+  {
+    "code": "0580",
+    "name": "Linköping",
+    "emissions": "5764",
+    "population": 166673
+  },
+  {
+    "code": "0581",
+    "name": "Norrköping",
+    "emissions": "5698",
+    "population": 145120
+  },
+  {
+    "code": "0582",
+    "name": "Söderköping",
+    "emissions": "5538",
+    "population": 14834
+  },
+  {
+    "code": "0562",
+    "name": "Finspång",
+    "emissions": "5400",
+    "population": 21903
+  },
+  {
+    "code": "0586",
+    "name": "Mjölby",
+    "emissions": "5391",
+    "population": 28471
+  },
+  {
+    "code": "0512",
+    "name": "Ydre",
+    "emissions": "5378",
+    "population": 3683
+  },
+  {
+    "code": "0513",
+    "name": "Kinda",
+    "emissions": "5374",
+    "population": 10068
+  },
+  {
+    "code": "0584",
+    "name": "Vadstena",
+    "emissions": "5331",
+    "population": 7481
+  },
+  {
+    "code": "0560",
+    "name": "Boxholm",
+    "emissions": "5302",
+    "population": 5498
+  },
+  {
+    "code": "0509",
+    "name": "Ödeshög",
+    "emissions": "5230",
+    "population": 5317
+  },
+  {
+    "code": "0563",
+    "name": "Valdemarsvik",
+    "emissions": "5217",
+    "population": 7630
+  },
+  {
+    "code": "0561",
+    "name": "Åtvidaberg",
+    "emissions": "5202",
+    "population": 11506
+  },
+  {
+    "code": "0583",
+    "name": "Motala",
+    "emissions": "5091",
+    "population": 43728
+  }
+]

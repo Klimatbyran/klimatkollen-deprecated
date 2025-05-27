@@ -1,0 +1,308 @@
+[
+  {
+    "code": "14",
+    "name": "Västra Götalands län",
+    "emissions": "5583",
+    "population": 1758656
+  },
+  {
+    "code": "SE",
+    "name": "Sverige",
+    "emissions": "5562",
+    "population": 10521556
+  },
+  {
+    "code": "1494",
+    "name": "Lidköping",
+    "emissions": "6197",
+    "population": 40457
+  },
+  {
+    "code": "1480",
+    "name": "Göteborg",
+    "emissions": "5808",
+    "population": 596841
+  },
+  {
+    "code": "1402",
+    "name": "Partille",
+    "emissions": "5694",
+    "population": 39852
+  },
+  {
+    "code": "1421",
+    "name": "Orust",
+    "emissions": "5650",
+    "population": 15415
+  },
+  {
+    "code": "1419",
+    "name": "Tjörn",
+    "emissions": "5624",
+    "population": 16275
+  },
+  {
+    "code": "1496",
+    "name": "Skövde",
+    "emissions": "5618",
+    "population": 57463
+  },
+  {
+    "code": "1481",
+    "name": "Mölndal",
+    "emissions": "5617",
+    "population": 70109
+  },
+  {
+    "code": "1401",
+    "name": "Härryda",
+    "emissions": "5615",
+    "population": 39762
+  },
+  {
+    "code": "1441",
+    "name": "Lerum",
+    "emissions": "5613",
+    "population": 43536
+  },
+  {
+    "code": "1443",
+    "name": "Bollebygd",
+    "emissions": "5610",
+    "population": 9703
+  },
+  {
+    "code": "1482",
+    "name": "Kungälv",
+    "emissions": "5606",
+    "population": 49068
+  },
+  {
+    "code": "1440",
+    "name": "Ale",
+    "emissions": "5585",
+    "population": 32394
+  },
+  {
+    "code": "1415",
+    "name": "Stenungsund",
+    "emissions": "5585",
+    "population": 27870
+  },
+  {
+    "code": "1435",
+    "name": "Tanum",
+    "emissions": "5579",
+    "population": 13013
+  },
+  {
+    "code": "1489",
+    "name": "Alingsås",
+    "emissions": "5528",
+    "population": 42199
+  },
+  {
+    "code": "1427",
+    "name": "Sotenäs",
+    "emissions": "5520",
+    "population": 9160
+  },
+  {
+    "code": "1446",
+    "name": "Karlsborg",
+    "emissions": "5504",
+    "population": 7057
+  },
+  {
+    "code": "1462",
+    "name": "Lilla Edet",
+    "emissions": "5500",
+    "population": 14428
+  },
+  {
+    "code": "1485",
+    "name": "Uddevalla",
+    "emissions": "5482",
+    "population": 57282
+  },
+  {
+    "code": "1471",
+    "name": "Götene",
+    "emissions": "5480",
+    "population": 13275
+  },
+  {
+    "code": "1497",
+    "name": "Hjo",
+    "emissions": "5457",
+    "population": 9243
+  },
+  {
+    "code": "1447",
+    "name": "Gullspång",
+    "emissions": "5455",
+    "population": 5194
+  },
+  {
+    "code": "1430",
+    "name": "Munkedal",
+    "emissions": "5440",
+    "population": 10578
+  },
+  {
+    "code": "1486",
+    "name": "Strömstad",
+    "emissions": "5429",
+    "population": 13290
+  },
+  {
+    "code": "1445",
+    "name": "Essunga",
+    "emissions": "5414",
+    "population": 5717
+  },
+  {
+    "code": "1490",
+    "name": "Borås",
+    "emissions": "5407",
+    "population": 114445
+  },
+  {
+    "code": "1444",
+    "name": "Grästorp",
+    "emissions": "5406",
+    "population": 5646
+  },
+  {
+    "code": "1495",
+    "name": "Skara",
+    "emissions": "5391",
+    "population": 18755
+  },
+  {
+    "code": "1484",
+    "name": "Lysekil",
+    "emissions": "5382",
+    "population": 14170
+  },
+  {
+    "code": "1407",
+    "name": "Öckerö",
+    "emissions": "5370",
+    "population": 12800
+  },
+  {
+    "code": "1472",
+    "name": "Tibro",
+    "emissions": "5322",
+    "population": 11399
+  },
+  {
+    "code": "1470",
+    "name": "Vara",
+    "emissions": "5310",
+    "population": 16163
+  },
+  {
+    "code": "1438",
+    "name": "Dals-Ed",
+    "emissions": "5290",
+    "population": 4650
+  },
+  {
+    "code": "1473",
+    "name": "Töreboda",
+    "emissions": "5275",
+    "population": 9186
+  },
+  {
+    "code": "1463",
+    "name": "Mark",
+    "emissions": "5270",
+    "population": 35329
+  },
+  {
+    "code": "1466",
+    "name": "Herrljunga",
+    "emissions": "5268",
+    "population": 9517
+  },
+  {
+    "code": "1498",
+    "name": "Tidaholm",
+    "emissions": "5268",
+    "population": 12839
+  },
+  {
+    "code": "1499",
+    "name": "Falköping",
+    "emissions": "5247",
+    "population": 33252
+  },
+  {
+    "code": "1442",
+    "name": "Vårgårda",
+    "emissions": "5246",
+    "population": 12268
+  },
+  {
+    "code": "1493",
+    "name": "Mariestad",
+    "emissions": "5245",
+    "population": 24768
+  },
+  {
+    "code": "1439",
+    "name": "Färgelanda",
+    "emissions": "5234",
+    "population": 6512
+  },
+  {
+    "code": "1487",
+    "name": "Vänersborg",
+    "emissions": "5227",
+    "population": 39904
+  },
+  {
+    "code": "1461",
+    "name": "Mellerud",
+    "emissions": "5227",
+    "population": 9263
+  },
+  {
+    "code": "1488",
+    "name": "Trollhättan",
+    "emissions": "5214",
+    "population": 59274
+  },
+  {
+    "code": "1452",
+    "name": "Tranemo",
+    "emissions": "5193",
+    "population": 11940
+  },
+  {
+    "code": "1465",
+    "name": "Svenljunga",
+    "emissions": "5162",
+    "population": 10816
+  },
+  {
+    "code": "1491",
+    "name": "Ulricehamn",
+    "emissions": "5153",
+    "population": 25108
+  },
+  {
+    "code": "1492",
+    "name": "Åmål",
+    "emissions": "5145",
+    "population": 12216
+  },
+  {
+    "code": "1460",
+    "name": "Bengtsfors",
+    "emissions": "5092",
+    "population": 9255
+  }
+]

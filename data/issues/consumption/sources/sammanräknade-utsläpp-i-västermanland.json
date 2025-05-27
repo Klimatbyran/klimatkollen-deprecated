@@ -1,0 +1,74 @@
+[
+  {
+    "code": "19",
+    "name": "Västmanlands län",
+    "emissions": "5498",
+    "population": 280713
+  },
+  {
+    "code": "SE",
+    "name": "Sverige",
+    "emissions": "5562",
+    "population": 10521556
+  },
+  {
+    "code": "1980",
+    "name": "Västerås",
+    "emissions": "5592",
+    "population": 158653
+  },
+  {
+    "code": "1961",
+    "name": "Hallstahammar",
+    "emissions": "5590",
+    "population": 16711
+  },
+  {
+    "code": "1984",
+    "name": "Arboga",
+    "emissions": "5482",
+    "population": 14083
+  },
+  {
+    "code": "1904",
+    "name": "Skinnskatteberg",
+    "emissions": "5474",
+    "population": 4402
+  },
+  {
+    "code": "1907",
+    "name": "Surahammar",
+    "emissions": "5408",
+    "population": 10033
+  },
+  {
+    "code": "1981",
+    "name": "Sala",
+    "emissions": "5332",
+    "population": 22981
+  },
+  {
+    "code": "1983",
+    "name": "Köping",
+    "emissions": "5331",
+    "population": 26120
+  },
+  {
+    "code": "1960",
+    "name": "Kungsör",
+    "emissions": "5319",
+    "population": 8762
+  },
+  {
+    "code": "1962",
+    "name": "Norberg",
+    "emissions": "5299",
+    "population": 5627
+  },
+  {
+    "code": "1982",
+    "name": "Fagersta",
+    "emissions": "5176",
+    "population": 13341
+  }
+]

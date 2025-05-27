@@ -1,0 +1,104 @@
+[
+  {
+    "code": "24",
+    "name": "Västerbottens län",
+    "emissions": "5411",
+    "population": 276295
+  },
+  {
+    "code": "SE",
+    "name": "Sverige",
+    "emissions": "5562",
+    "population": 10521556
+  },
+  {
+    "code": "2480",
+    "name": "Umeå",
+    "emissions": "5541",
+    "population": 132235
+  },
+  {
+    "code": "2401",
+    "name": "Nordmaling",
+    "emissions": "5399",
+    "population": 7066
+  },
+  {
+    "code": "2482",
+    "name": "Skellefteå",
+    "emissions": "5387",
+    "population": 74402
+  },
+  {
+    "code": "2425",
+    "name": "Dorotea",
+    "emissions": "5360",
+    "population": 2413
+  },
+  {
+    "code": "2462",
+    "name": "Vilhelmina",
+    "emissions": "5327",
+    "population": 6393
+  },
+  {
+    "code": "2460",
+    "name": "Vännäs",
+    "emissions": "5321",
+    "population": 8963
+  },
+  {
+    "code": "2403",
+    "name": "Bjurholm",
+    "emissions": "5312",
+    "population": 2372
+  },
+  {
+    "code": "2421",
+    "name": "Storuman",
+    "emissions": "5227",
+    "population": 5747
+  },
+  {
+    "code": "2409",
+    "name": "Robertsfors",
+    "emissions": "5213",
+    "population": 6759
+  },
+  {
+    "code": "2417",
+    "name": "Norsjö",
+    "emissions": "5057",
+    "population": 3947
+  },
+  {
+    "code": "2418",
+    "name": "Malå",
+    "emissions": "5056",
+    "population": 3033
+  },
+  {
+    "code": "2422",
+    "name": "Sorsele",
+    "emissions": "5049",
+    "population": 2436
+  },
+  {
+    "code": "2481",
+    "name": "Lycksele",
+    "emissions": "5032",
+    "population": 12243
+  },
+  {
+    "code": "2404",
+    "name": "Vindeln",
+    "emissions": "5028",
+    "population": 5504
+  },
+  {
+    "code": "2463",
+    "name": "Åsele",
+    "emissions": "5012",
+    "population": 2782
+  }
+]

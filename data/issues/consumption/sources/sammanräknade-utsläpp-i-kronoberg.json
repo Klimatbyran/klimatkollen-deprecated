@@ -1,0 +1,62 @@
+[
+  {
+    "code": "07",
+    "name": "Kronobergs län",
+    "emissions": "5295",
+    "population": 204335
+  },
+  {
+    "code": "SE",
+    "name": "Sverige",
+    "emissions": "5562",
+    "population": 10521556
+  },
+  {
+    "code": "0781",
+    "name": "Ljungby",
+    "emissions": "5770",
+    "population": 28483
+  },
+  {
+    "code": "0765",
+    "name": "Älmhult",
+    "emissions": "5372",
+    "population": 18092
+  },
+  {
+    "code": "0761",
+    "name": "Lessebo",
+    "emissions": "5329",
+    "population": 8485
+  },
+  {
+    "code": "0763",
+    "name": "Tingsryd",
+    "emissions": "5306",
+    "population": 12297
+  },
+  {
+    "code": "0767",
+    "name": "Markaryd",
+    "emissions": "5301",
+    "population": 10166
+  },
+  {
+    "code": "0780",
+    "name": "Växjö",
+    "emissions": "5189",
+    "population": 97137
+  },
+  {
+    "code": "0764",
+    "name": "Alvesta",
+    "emissions": "5157",
+    "population": 20257
+  },
+  {
+    "code": "0760",
+    "name": "Uppvidinge",
+    "emissions": "5062",
+    "population": 9418
+  }
+]
