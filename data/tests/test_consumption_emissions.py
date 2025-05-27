@@ -2,22 +2,26 @@
 import unittest
 import pandas as pd
 
+from issues.consumption.consumption_emissions import get_consumption_emissions
+
 
 class TestConsumtionEmissionsCalculations(unittest.TestCase):
+    """Test class for consumption emissions calculations."""
 
     def test_get_consumption_emissions(self):
+        """Test that get_consumption_emissions returns correct data."""
         df_expected = pd.DataFrame(
             {
                 "Kommun": ["Ale", "Alingsås", "Alvesta"],
-                "bikeMetrePerCapita": [
-                    92077 / 32576,
-                    123300 / 42722,
-                    66699 / 19830,
+                "consumptionEmissions": [
+                    5585,
+                    5528,
+                    5157,
                 ],
             }
         )
 
-        df_result = calculate_bike_lane_per_capita()
+        df_result = get_consumption_emissions()
 
         pd.testing.assert_frame_equal(
             df_result.iloc[:3], df_expected, check_dtype=False
