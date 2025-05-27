@@ -20,7 +20,6 @@ def get_consumption_emissions():
 
     # Process each JSON file in the sources directory
     for file_path in sources_dir.glob("*.json"):
-        print("file_path", file_path)
         with open(file_path, "r", encoding="utf-8") as file:
             municipalities_data = json.load(file)
 
@@ -35,14 +34,9 @@ def get_consumption_emissions():
                     "consumptionEmissions": float(entry["emissions"]) / 1000,
                 }
 
-                print("municipality", municipality)
-
                 all_municipalities.append(municipality)
-                print("all_municipalities", all_municipalities)
 
     # Convert to pandas DataFrame
     df_consumption = pd.DataFrame(all_municipalities)
-    print("DF CON")
-    print(df_consumption.head())
 
     return df_consumption

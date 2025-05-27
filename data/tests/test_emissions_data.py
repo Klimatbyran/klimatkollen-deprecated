@@ -64,7 +64,6 @@ class TestEmissionData(unittest.TestCase):
             2022,
             2023,
         ]
-        print(result_columns)
 
         # Check that the expected columns are in the dataframe
         assert result_columns == expected_columns
