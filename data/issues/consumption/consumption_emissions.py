@@ -1,12 +1,10 @@
 import json
 import pandas as pd
+from pathlib import Path
 
 
-PATH_CONSUMPTION_DATA = "issues/consumption/consumption_data_raw.json"
-
-
-def get_consumption_emissions(df):
-    """Add consumption emissions data to the input DataFrame.
+def get_consumption_emissions():
+    """Add consumption emissions data to the input DataFrame from source JSON files.
 
     Args:
         df (pd.DataFrame): Input DataFrame containing municipality data
@@ -14,33 +12,37 @@ def get_consumption_emissions(df):
     Returns:
         pd.DataFrame: DataFrame with consumption emissions data added
     """
+    # Path to source JSON files
+    sources_dir = Path(__file__).parent / "sources"
 
-    # Parse JSON data
-    with open(PATH_CONSUMPTION_DATA, "r", encoding="utf-8") as file:
-        data = json.load(file)
+    # List to store emissions data for all municipalities
+    all_municipalities = []
 
-    # List to store each municipality's emission properties
-    features_list = []
-    total_emissions_list = []
+    # Process each JSON file in the sources directory
+    for file_path in sources_dir.glob("*.json"):
+        print("file_path", file_path)
+        with open(file_path, "r", encoding="utf-8") as file:
+            municipalities_data = json.load(file)
 
-    for item in data:
-        for feature in item["features"]:
-            # Get properties
-            properties = feature["properties"]
+            # Extract municipality data (exclude country and county entries)
+            for entry in municipalities_data:
+                # Skip entries for Sweden (SE) and counties (2-digit codes)
+                if entry["code"] == "SE" or (len(entry["code"]) <= 2):
+                    continue
 
-            # Rename keys
-            properties["Kommun"] = properties.pop("kom_namn")
+                municipality = {
+                    "Kommun": entry["name"],
+                    "consumptionEmissions": float(entry["emissions"]) / 1000,
+                }
 
-            # Convert total emissions to tons
-            properties["Total emissions (tons)"] = properties["Total emissions"] / 1000
+                print("municipality", municipality)
 
-            # Remove unwanted 'geoid' and 'län' key
-            properties.pop("geoid", None)
-
-            features_list.append(properties)
+                all_municipalities.append(municipality)
+                print("all_municipalities", all_municipalities)
 
     # Convert to pandas DataFrame
-    df_consumption = pd.DataFrame(features_list)
+    df_consumption = pd.DataFrame(all_municipalities)
+    print("DF CON")
+    print(df_consumption.head())
 
-    df = df.merge(df_consumption, on="Kommun", how="left")
-    return df
+    return df_consumption
