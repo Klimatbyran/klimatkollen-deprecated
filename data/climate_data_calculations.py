@@ -61,7 +61,7 @@ def create_dataframe(to_percentage: bool) -> pd.DataFrame:
     )
     print("8. Climate requirements in procurements added")
 
-    return result_df
+    return result_df.sort_values(by="Kommun").reset_index(drop=True)
 
 
 def series_to_dict(row: pd.Series, numeric_columns: List[Any]) -> Dict:
