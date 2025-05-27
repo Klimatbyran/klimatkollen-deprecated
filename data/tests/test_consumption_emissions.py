@@ -14,18 +14,17 @@ class TestConsumtionEmissionsCalculations(unittest.TestCase):
             {
                 "Kommun": ["Ale", "Alingsås", "Alvesta"],
                 "consumptionEmissions": [
-                    5585,
-                    5528,
-                    5157,
+                    5.585,
+                    5.528,
+                    5.157,
                 ],
             }
         )
 
         df_result = get_consumption_emissions()
+        df_result_sorted = df_result.sort_values(by="Kommun").reset_index(drop=True)
 
-        pd.testing.assert_frame_equal(
-            df_result.iloc[:3], df_expected, check_dtype=False
-        )
+        pd.testing.assert_frame_equal(df_result_sorted.iloc[:3], df_expected)
 
 
 if __name__ == "__main__":
