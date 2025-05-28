@@ -2,91 +2,91 @@
   {
     "code": "06",
     "name": "Jönköpings län",
-    "emissions": "5347",
-    "population": 369113
+    "emissions": "5581",
+    "population": 368856
   },
   {
     "code": "SE",
     "name": "Sverige",
-    "emissions": "5562",
-    "population": 10521556
-  },
-  {
-    "code": "0686",
-    "name": "Eksjö",
-    "emissions": "6000",
-    "population": 17858
-  },
-  {
-    "code": "0643",
-    "name": "Habo",
-    "emissions": "5509",
-    "population": 13128
-  },
-  {
-    "code": "0680",
-    "name": "Jönköping",
-    "emissions": "5463",
-    "population": 145114
-  },
-  {
-    "code": "0665",
-    "name": "Vaggeryd",
-    "emissions": "5352",
-    "population": 14854
-  },
-  {
-    "code": "0642",
-    "name": "Mullsjö",
-    "emissions": "5312",
-    "population": 7532
-  },
-  {
-    "code": "0617",
-    "name": "Gnosjö",
-    "emissions": "5278",
-    "population": 9438
-  },
-  {
-    "code": "0683",
-    "name": "Värnamo",
-    "emissions": "5273",
-    "population": 34692
+    "emissions": "5829",
+    "population": 10551707
   },
   {
     "code": "0604",
     "name": "Aneby",
-    "emissions": "5253",
-    "population": 6824
+    "emissions": "5484",
+    "population": 6852
+  },
+  {
+    "code": "0686",
+    "name": "Eksjö",
+    "emissions": "6047",
+    "population": 17750
   },
   {
     "code": "0662",
     "name": "Gislaved",
-    "emissions": "5207",
-    "population": 29481
+    "emissions": "5484",
+    "population": 29014
   },
   {
-    "code": "0684",
-    "name": "Sävsjö",
-    "emissions": "5188",
-    "population": 11771
+    "code": "0617",
+    "name": "Gnosjö",
+    "emissions": "5576",
+    "population": 9246
   },
   {
-    "code": "0685",
-    "name": "Vetlanda",
-    "emissions": "5169",
-    "population": 27673
+    "code": "0643",
+    "name": "Habo",
+    "emissions": "5782",
+    "population": 13275
+  },
+  {
+    "code": "0680",
+    "name": "Jönköping",
+    "emissions": "5696",
+    "population": 146161
+  },
+  {
+    "code": "0642",
+    "name": "Mullsjö",
+    "emissions": "5487",
+    "population": 7577
   },
   {
     "code": "0682",
     "name": "Nässjö",
-    "emissions": "5038",
-    "population": 31944
+    "emissions": "5300",
+    "population": 31648
+  },
+  {
+    "code": "0684",
+    "name": "Sävsjö",
+    "emissions": "5422",
+    "population": 11668
   },
   {
     "code": "0687",
     "name": "Tranås",
-    "emissions": "5036",
-    "population": 18804
+    "emissions": "5209",
+    "population": 18755
+  },
+  {
+    "code": "0665",
+    "name": "Vaggeryd",
+    "emissions": "5559",
+    "population": 14811
+  },
+  {
+    "code": "0683",
+    "name": "Värnamo",
+    "emissions": "5584",
+    "population": 34601
+  },
+  {
+    "code": "0685",
+    "name": "Vetlanda",
+    "emissions": "5374",
+    "population": 27498
   }
 ]

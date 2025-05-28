@@ -2,73 +2,73 @@
   {
     "code": "21",
     "name": "Gävleborgs län",
-    "emissions": "5313",
-    "population": 287334
+    "emissions": "5518",
+    "population": 285642
   },
   {
     "code": "SE",
     "name": "Sverige",
-    "emissions": "5562",
-    "population": 10521556
+    "emissions": "5829",
+    "population": 10551707
   },
   {
     "code": "2183",
     "name": "Bollnäs",
-    "emissions": "5584",
-    "population": 26624
-  },
-  {
-    "code": "2132",
-    "name": "Nordanstig",
-    "emissions": "5559",
-    "population": 9487
-  },
-  {
-    "code": "2184",
-    "name": "Hudiksvall",
-    "emissions": "5395",
-    "population": 37688
-  },
-  {
-    "code": "2104",
-    "name": "Hofors",
-    "emissions": "5366",
-    "population": 9472
-  },
-  {
-    "code": "2181",
-    "name": "Sandviken",
-    "emissions": "5359",
-    "population": 39098
-  },
-  {
-    "code": "2101",
-    "name": "Ockelbo",
-    "emissions": "5325",
-    "population": 5821
-  },
-  {
-    "code": "2121",
-    "name": "Ovanåker",
-    "emissions": "5282",
-    "population": 11622
-  },
-  {
-    "code": "2182",
-    "name": "Söderhamn",
-    "emissions": "5281",
-    "population": 25258
-  },
-  {
-    "code": "2161",
-    "name": "Ljusdal",
-    "emissions": "5259",
-    "population": 18771
+    "emissions": "5750",
+    "population": 26414
   },
   {
     "code": "2180",
     "name": "Gävle",
-    "emissions": "5188",
-    "population": 103493
+    "emissions": "5419",
+    "population": 103532
+  },
+  {
+    "code": "2104",
+    "name": "Hofors",
+    "emissions": "5543",
+    "population": 9374
+  },
+  {
+    "code": "2184",
+    "name": "Hudiksvall",
+    "emissions": "5598",
+    "population": 37645
+  },
+  {
+    "code": "2161",
+    "name": "Ljusdal",
+    "emissions": "5462",
+    "population": 18538
+  },
+  {
+    "code": "2132",
+    "name": "Nordanstig",
+    "emissions": "5772",
+    "population": 9370
+  },
+  {
+    "code": "2101",
+    "name": "Ockelbo",
+    "emissions": "5469",
+    "population": 5758
+  },
+  {
+    "code": "2121",
+    "name": "Ovanåker",
+    "emissions": "5412",
+    "population": 11525
+  },
+  {
+    "code": "2181",
+    "name": "Sandviken",
+    "emissions": "5586",
+    "population": 38628
+  },
+  {
+    "code": "2182",
+    "name": "Söderhamn",
+    "emissions": "5452",
+    "population": 24858
   }
 ]
