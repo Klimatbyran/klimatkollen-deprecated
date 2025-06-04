@@ -62,8 +62,6 @@ def generate_sector_emissions_file(
     with open(output_file, "w", encoding="utf8") as json_file:
         json.dump(sector_data, json_file, ensure_ascii=False, indent=2)
 
-    print(f"Sector emissions data saved to {output_file}")
-
 
 if __name__ == "__main__":
     generate_sector_emissions_file()

@@ -1,0 +1,68 @@
+[
+  {
+    "code": "04",
+    "name": "Södermanlands län",
+    "emissions": "5513",
+    "population": 301944
+  },
+  {
+    "code": "SE",
+    "name": "Sverige",
+    "emissions": "5829",
+    "population": 10551707
+  },
+  {
+    "code": "0484",
+    "name": "Eskilstuna",
+    "emissions": "5385",
+    "population": 107468
+  },
+  {
+    "code": "0482",
+    "name": "Flen",
+    "emissions": "5548",
+    "population": 15668
+  },
+  {
+    "code": "0461",
+    "name": "Gnesta",
+    "emissions": "5735",
+    "population": 11520
+  },
+  {
+    "code": "0483",
+    "name": "Katrineholm",
+    "emissions": "5334",
+    "population": 34324
+  },
+  {
+    "code": "0480",
+    "name": "Nyköping",
+    "emissions": "5573",
+    "population": 58200
+  },
+  {
+    "code": "0481",
+    "name": "Oxelösund",
+    "emissions": "5306",
+    "population": 12106
+  },
+  {
+    "code": "0486",
+    "name": "Strängnäs",
+    "emissions": "5845",
+    "population": 38917
+  },
+  {
+    "code": "0488",
+    "name": "Trosa",
+    "emissions": "5741",
+    "population": 14885
+  },
+  {
+    "code": "0428",
+    "name": "Vingåker",
+    "emissions": "5472",
+    "population": 8856
+  }
+]

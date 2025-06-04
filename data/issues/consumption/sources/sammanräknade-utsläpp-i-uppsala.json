@@ -1,0 +1,62 @@
+[
+  {
+    "code": "03",
+    "name": "Uppsala län",
+    "emissions": "5885",
+    "population": 404589
+  },
+  {
+    "code": "SE",
+    "name": "Sverige",
+    "emissions": "5829",
+    "population": 10551707
+  },
+  {
+    "code": "0319",
+    "name": "Älvkarleby",
+    "emissions": "5472",
+    "population": 9572
+  },
+  {
+    "code": "0381",
+    "name": "Enköping",
+    "emissions": "5552",
+    "population": 48292
+  },
+  {
+    "code": "0305",
+    "name": "Håbo",
+    "emissions": "5780",
+    "population": 22974
+  },
+  {
+    "code": "0331",
+    "name": "Heby",
+    "emissions": "5435",
+    "population": 14343
+  },
+  {
+    "code": "0330",
+    "name": "Knivsta",
+    "emissions": "6062",
+    "population": 20714
+  },
+  {
+    "code": "0382",
+    "name": "Östhammar",
+    "emissions": "5394",
+    "population": 22172
+  },
+  {
+    "code": "0360",
+    "name": "Tierp",
+    "emissions": "5348",
+    "population": 21193
+  },
+  {
+    "code": "0380",
+    "name": "Uppsala",
+    "emissions": "6079",
+    "population": 245329
+  }
+]

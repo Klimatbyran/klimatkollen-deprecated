@@ -1,0 +1,212 @@
+[
+  {
+    "code": "12",
+    "name": "Skåne län",
+    "emissions": "5880",
+    "population": 1421781
+  },
+  {
+    "code": "SE",
+    "name": "Sverige",
+    "emissions": "5829",
+    "population": 10551707
+  },
+  {
+    "code": "1292",
+    "name": "Ängelholm",
+    "emissions": "5678",
+    "population": 44866
+  },
+  {
+    "code": "1277",
+    "name": "Åstorp",
+    "emissions": "5650",
+    "population": 16458
+  },
+  {
+    "code": "1278",
+    "name": "Båstad",
+    "emissions": "6279",
+    "population": 15912
+  },
+  {
+    "code": "1260",
+    "name": "Bjuv",
+    "emissions": "5481",
+    "population": 15968
+  },
+  {
+    "code": "1272",
+    "name": "Bromölla",
+    "emissions": "5532",
+    "population": 12498
+  },
+  {
+    "code": "1231",
+    "name": "Burlöv",
+    "emissions": "6008",
+    "population": 19844
+  },
+  {
+    "code": "1285",
+    "name": "Eslöv",
+    "emissions": "5558",
+    "population": 34775
+  },
+  {
+    "code": "1293",
+    "name": "Hässleholm",
+    "emissions": "5510",
+    "population": 52241
+  },
+  {
+    "code": "1283",
+    "name": "Helsingborg",
+    "emissions": "5924",
+    "population": 151306
+  },
+  {
+    "code": "1284",
+    "name": "Höganäs",
+    "emissions": "5932",
+    "population": 28193
+  },
+  {
+    "code": "1267",
+    "name": "Höör",
+    "emissions": "5661",
+    "population": 17376
+  },
+  {
+    "code": "1266",
+    "name": "Hörby",
+    "emissions": "5588",
+    "population": 15585
+  },
+  {
+    "code": "1261",
+    "name": "Kävlinge",
+    "emissions": "6115",
+    "population": 32430
+  },
+  {
+    "code": "1276",
+    "name": "Klippan",
+    "emissions": "5513",
+    "population": 17723
+  },
+  {
+    "code": "1290",
+    "name": "Kristianstad",
+    "emissions": "5428",
+    "population": 86560
+  },
+  {
+    "code": "1282",
+    "name": "Landskrona",
+    "emissions": "5851",
+    "population": 47134
+  },
+  {
+    "code": "1262",
+    "name": "Lomma",
+    "emissions": "6501",
+    "population": 24627
+  },
+  {
+    "code": "1281",
+    "name": "Lund",
+    "emissions": "5746",
+    "population": 130288
+  },
+  {
+    "code": "1280",
+    "name": "Malmö",
+    "emissions": "6184",
+    "population": 362133
+  },
+  {
+    "code": "1257",
+    "name": "Örkelljunga",
+    "emissions": "5436",
+    "population": 10433
+  },
+  {
+    "code": "1273",
+    "name": "Osby",
+    "emissions": "5566",
+    "population": 13106
+  },
+  {
+    "code": "1256",
+    "name": "Östra Göinge",
+    "emissions": "5380",
+    "population": 14331
+  },
+  {
+    "code": "1275",
+    "name": "Perstorp",
+    "emissions": "5411",
+    "population": 7323
+  },
+  {
+    "code": "1291",
+    "name": "Simrishamn",
+    "emissions": "5711",
+    "population": 18962
+  },
+  {
+    "code": "1265",
+    "name": "Sjöbo",
+    "emissions": "5543",
+    "population": 19437
+  },
+  {
+    "code": "1264",
+    "name": "Skurup",
+    "emissions": "5602",
+    "population": 16861
+  },
+  {
+    "code": "1230",
+    "name": "Staffanstorp",
+    "emissions": "6213",
+    "population": 27152
+  },
+  {
+    "code": "1214",
+    "name": "Svalöv",
+    "emissions": "5549",
+    "population": 14544
+  },
+  {
+    "code": "1263",
+    "name": "Svedala",
+    "emissions": "5943",
+    "population": 23470
+  },
+  {
+    "code": "1270",
+    "name": "Tomelilla",
+    "emissions": "5394",
+    "population": 13660
+  },
+  {
+    "code": "1287",
+    "name": "Trelleborg",
+    "emissions": "5817",
+    "population": 46936
+  },
+  {
+    "code": "1233",
+    "name": "Vellinge",
+    "emissions": "6510",
+    "population": 37738
+  },
+  {
+    "code": "1286",
+    "name": "Ystad",
+    "emissions": "5572",
+    "population": 31911
+  }
+]

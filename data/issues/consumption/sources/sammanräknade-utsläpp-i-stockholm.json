@@ -1,0 +1,170 @@
+[
+  {
+    "code": "01",
+    "name": "Stockholms län",
+    "emissions": "6087",
+    "population": 2454821
+  },
+  {
+    "code": "SE",
+    "name": "Sverige",
+    "emissions": "5829",
+    "population": 10551707
+  },
+  {
+    "code": "0127",
+    "name": "Botkyrka",
+    "emissions": "5737",
+    "population": 95592
+  },
+  {
+    "code": "0162",
+    "name": "Danderyd",
+    "emissions": "7606",
+    "population": 32419
+  },
+  {
+    "code": "0125",
+    "name": "Ekerö",
+    "emissions": "6230",
+    "population": 28808
+  },
+  {
+    "code": "0136",
+    "name": "Haninge",
+    "emissions": "5495",
+    "population": 99751
+  },
+  {
+    "code": "0126",
+    "name": "Huddinge",
+    "emissions": "5843",
+    "population": 113920
+  },
+  {
+    "code": "0123",
+    "name": "Järfälla",
+    "emissions": "5951",
+    "population": 86330
+  },
+  {
+    "code": "0186",
+    "name": "Lidingö",
+    "emissions": "6955",
+    "population": 48324
+  },
+  {
+    "code": "0182",
+    "name": "Nacka",
+    "emissions": "6302",
+    "population": 110633
+  },
+  {
+    "code": "0188",
+    "name": "Norrtälje",
+    "emissions": "5533",
+    "population": 65770
+  },
+  {
+    "code": "0140",
+    "name": "Nykvarn",
+    "emissions": "5849",
+    "population": 12107
+  },
+  {
+    "code": "0192",
+    "name": "Nynäshamn",
+    "emissions": "5598",
+    "population": 30311
+  },
+  {
+    "code": "0117",
+    "name": "Österåker",
+    "emissions": "5983",
+    "population": 49282
+  },
+  {
+    "code": "0128",
+    "name": "Salem",
+    "emissions": "5844",
+    "population": 17451
+  },
+  {
+    "code": "0191",
+    "name": "Sigtuna",
+    "emissions": "5652",
+    "population": 52529
+  },
+  {
+    "code": "0181",
+    "name": "Södertälje",
+    "emissions": "5559",
+    "population": 102519
+  },
+  {
+    "code": "0163",
+    "name": "Sollentuna",
+    "emissions": "6400",
+    "population": 76790
+  },
+  {
+    "code": "0184",
+    "name": "Solna",
+    "emissions": "6058",
+    "population": 85426
+  },
+  {
+    "code": "0180",
+    "name": "Stockholm",
+    "emissions": "6235",
+    "population": 988943
+  },
+  {
+    "code": "0183",
+    "name": "Sundbyberg",
+    "emissions": "6006",
+    "population": 55912
+  },
+  {
+    "code": "0160",
+    "name": "Täby",
+    "emissions": "6403",
+    "population": 76738
+  },
+  {
+    "code": "0138",
+    "name": "Tyresö",
+    "emissions": "5776",
+    "population": 49173
+  },
+  {
+    "code": "0114",
+    "name": "Upplands Väsby",
+    "emissions": "5755",
+    "population": 50110
+  },
+  {
+    "code": "0139",
+    "name": "Upplands-Bro",
+    "emissions": "6027",
+    "population": 32453
+  },
+  {
+    "code": "0115",
+    "name": "Vallentuna",
+    "emissions": "6035",
+    "population": 35076
+  },
+  {
+    "code": "0120",
+    "name": "Värmdö",
+    "emissions": "5975",
+    "population": 46637
+  },
+  {
+    "code": "0187",
+    "name": "Vaxholm",
+    "emissions": "6536",
+    "population": 11817
+  }
+]

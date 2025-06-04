@@ -16,7 +16,7 @@ from facts.plans.plans_data_prep import get_climate_plans
 from facts.municipalities_counties import get_municipalities
 from facts.procurements.climate_requirements_in_procurements import get_procurement_data
 from issues.emissions.emission_data_calculations import emission_calculations
-from issues.consumption.consumption_data_calculations import get_consumption_emissions
+from issues.consumption.consumption_emissions import get_consumption_emissions
 
 # Notebook from ClimateView that our calculations are based on:
 # https://colab.research.google.com/drive/1qqMbdBTu5ulAPUe-0CRBmFuh8aNOiHEb?usp=sharing
@@ -43,11 +43,14 @@ def create_dataframe(to_percentage: bool) -> pd.DataFrame:
     )
     print("5. Bicycle data added")
 
-    consumption_emissions_df = get_consumption_emissions(climate_plans_with_bike_df)
+    consumption_emissions_df = get_consumption_emissions()
+    bike_lane_with_consumption_emissions_df = consumption_emissions_df.merge(
+        climate_plans_with_bike_df, on="Kommun", how="left"
+    )
     print("6. Consumption emission data added")
 
     evpc_df = get_electric_vehicle_per_charge_points()
-    consumption_emissions_with_evpc_df = consumption_emissions_df.merge(
+    consumption_emissions_with_evpc_df = bike_lane_with_consumption_emissions_df.merge(
         evpc_df, on="Kommun", how="left"
     )
     print("7. CPEV for December 2023 added")
@@ -58,7 +61,7 @@ def create_dataframe(to_percentage: bool) -> pd.DataFrame:
     )
     print("8. Climate requirements in procurements added")
 
-    return result_df
+    return result_df.sort_values(by="Kommun").reset_index(drop=True)
 
 
 def series_to_dict(row: pd.Series, numeric_columns: List[Any]) -> Dict:
@@ -92,7 +95,7 @@ def series_to_dict(row: pd.Series, numeric_columns: List[Any]) -> Dict:
         "climatePlanYear": row["Antagen år"],
         "climatePlanComment": row["Namn, giltighetsår, kommentar"],
         "bicycleMetrePerCapita": row["bikeMetrePerCapita"],
-        "totalConsumptionEmission": row["Total emissions (tons)"],
+        "totalConsumptionEmission": row["consumptionEmissions"],
         "electricVehiclePerChargePoints": (
             row["EVPC"] if pd.notna(row["EVPC"]) else None
         ),

@@ -1,0 +1,20 @@
+[
+  {
+    "code": "09",
+    "name": "Gotlands län",
+    "emissions": "5461",
+    "population": 61029
+  },
+  {
+    "code": "SE",
+    "name": "Sverige",
+    "emissions": "5829",
+    "population": 10551707
+  },
+  {
+    "code": "0980",
+    "name": "Gotland",
+    "emissions": "5461",
+    "population": 61029
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "code": "21",
+    "name": "Gävleborgs län",
+    "emissions": "5518",
+    "population": 285642
+  },
+  {
+    "code": "SE",
+    "name": "Sverige",
+    "emissions": "5829",
+    "population": 10551707
+  },
+  {
+    "code": "2183",
+    "name": "Bollnäs",
+    "emissions": "5750",
+    "population": 26414
+  },
+  {
+    "code": "2180",
+    "name": "Gävle",
+    "emissions": "5419",
+    "population": 103532
+  },
+  {
+    "code": "2104",
+    "name": "Hofors",
+    "emissions": "5543",
+    "population": 9374
+  },
+  {
+    "code": "2184",
+    "name": "Hudiksvall",
+    "emissions": "5598",
+    "population": 37645
+  },
+  {
+    "code": "2161",
+    "name": "Ljusdal",
+    "emissions": "5462",
+    "population": 18538
+  },
+  {
+    "code": "2132",
+    "name": "Nordanstig",
+    "emissions": "5772",
+    "population": 9370
+  },
+  {
+    "code": "2101",
+    "name": "Ockelbo",
+    "emissions": "5469",
+    "population": 5758
+  },
+  {
+    "code": "2121",
+    "name": "Ovanåker",
+    "emissions": "5412",
+    "population": 11525
+  },
+  {
+    "code": "2181",
+    "name": "Sandviken",
+    "emissions": "5586",
+    "population": 38628
+  },
+  {
+    "code": "2182",
+    "name": "Söderhamn",
+    "emissions": "5452",
+    "population": 24858
+  }
+]

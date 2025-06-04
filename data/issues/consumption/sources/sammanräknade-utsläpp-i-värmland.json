@@ -1,0 +1,110 @@
+[
+  {
+    "code": "17",
+    "name": "Värmlands län",
+    "emissions": "5606",
+    "population": 283548
+  },
+  {
+    "code": "SE",
+    "name": "Sverige",
+    "emissions": "5829",
+    "population": 10551707
+  },
+  {
+    "code": "1765",
+    "name": "Årjäng",
+    "emissions": "5610",
+    "population": 9893
+  },
+  {
+    "code": "1784",
+    "name": "Arvika",
+    "emissions": "5467",
+    "population": 25682
+  },
+  {
+    "code": "1730",
+    "name": "Eda",
+    "emissions": "5932",
+    "population": 8499
+  },
+  {
+    "code": "1782",
+    "name": "Filipstad",
+    "emissions": "5459",
+    "population": 10034
+  },
+  {
+    "code": "1763",
+    "name": "Forshaga",
+    "emissions": "5536",
+    "population": 11538
+  },
+  {
+    "code": "1764",
+    "name": "Grums",
+    "emissions": "5544",
+    "population": 9057
+  },
+  {
+    "code": "1783",
+    "name": "Hagfors",
+    "emissions": "5657",
+    "population": 11536
+  },
+  {
+    "code": "1761",
+    "name": "Hammarö",
+    "emissions": "5852",
+    "population": 16940
+  },
+  {
+    "code": "1780",
+    "name": "Karlstad",
+    "emissions": "5641",
+    "population": 97233
+  },
+  {
+    "code": "1715",
+    "name": "Kil",
+    "emissions": "5580",
+    "population": 12085
+  },
+  {
+    "code": "1781",
+    "name": "Kristinehamn",
+    "emissions": "5424",
+    "population": 23817
+  },
+  {
+    "code": "1762",
+    "name": "Munkfors",
+    "emissions": "5562",
+    "population": 3669
+  },
+  {
+    "code": "1785",
+    "name": "Säffle",
+    "emissions": "5591",
+    "population": 15011
+  },
+  {
+    "code": "1760",
+    "name": "Storfors",
+    "emissions": "5948",
+    "population": 3801
+  },
+  {
+    "code": "1766",
+    "name": "Sunne",
+    "emissions": "5556",
+    "population": 13366
+  },
+  {
+    "code": "1737",
+    "name": "Torsby",
+    "emissions": "5596",
+    "population": 11387
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "code": "25",
+    "name": "Norrbottens län",
+    "emissions": "5809",
+    "population": 248480
+  },
+  {
+    "code": "SE",
+    "name": "Sverige",
+    "emissions": "5829",
+    "population": 10551707
+  },
+  {
+    "code": "2560",
+    "name": "Älvsbyn",
+    "emissions": "5746",
+    "population": 7783
+  },
+  {
+    "code": "2506",
+    "name": "Arjeplog",
+    "emissions": "5694",
+    "population": 2609
+  },
+  {
+    "code": "2505",
+    "name": "Arvidsjaur",
+    "emissions": "5228",
+    "population": 6113
+  },
+  {
+    "code": "2582",
+    "name": "Boden",
+    "emissions": "6717",
+    "population": 27943
+  },
+  {
+    "code": "2523",
+    "name": "Gällivare",
+    "emissions": "5677",
+    "population": 17330
+  },
+  {
+    "code": "2583",
+    "name": "Haparanda",
+    "emissions": "5467",
+    "population": 9177
+  },
+  {
+    "code": "2510",
+    "name": "Jokkmokk",
+    "emissions": "5463",
+    "population": 4728
+  },
+  {
+    "code": "2514",
+    "name": "Kalix",
+    "emissions": "5421",
+    "population": 15547
+  },
+  {
+    "code": "2584",
+    "name": "Kiruna",
+    "emissions": "6744",
+    "population": 22433
+  },
+  {
+    "code": "2580",
+    "name": "Luleå",
+    "emissions": "5615",
+    "population": 79352
+  },
+  {
+    "code": "2513",
+    "name": "Överkalix",
+    "emissions": "5723",
+    "population": 3162
+  },
+  {
+    "code": "2518",
+    "name": "Övertorneå",
+    "emissions": "5836",
+    "population": 4088
+  },
+  {
+    "code": "2521",
+    "name": "Pajala",
+    "emissions": "5447",
+    "population": 5871
+  },
+  {
+    "code": "2581",
+    "name": "Piteå",
+    "emissions": "5542",
+    "population": 42344
+  }
+]

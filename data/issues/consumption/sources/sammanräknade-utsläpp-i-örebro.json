@@ -1,0 +1,86 @@
+[
+  {
+    "code": "18",
+    "name": "Örebro län",
+    "emissions": "5609",
+    "population": 308116
+  },
+  {
+    "code": "SE",
+    "name": "Sverige",
+    "emissions": "5829",
+    "population": 10551707
+  },
+  {
+    "code": "1882",
+    "name": "Askersund",
+    "emissions": "5587",
+    "population": 11478
+  },
+  {
+    "code": "1862",
+    "name": "Degerfors",
+    "emissions": "5506",
+    "population": 9357
+  },
+  {
+    "code": "1863",
+    "name": "Hällefors",
+    "emissions": "5355",
+    "population": 6495
+  },
+  {
+    "code": "1861",
+    "name": "Hallsberg",
+    "emissions": "5591",
+    "population": 16232
+  },
+  {
+    "code": "1883",
+    "name": "Karlskoga",
+    "emissions": "5569",
+    "population": 30261
+  },
+  {
+    "code": "1881",
+    "name": "Kumla",
+    "emissions": "5709",
+    "population": 22516
+  },
+  {
+    "code": "1860",
+    "name": "Laxå",
+    "emissions": "5552",
+    "population": 5497
+  },
+  {
+    "code": "1814",
+    "name": "Lekeberg",
+    "emissions": "5712",
+    "population": 8606
+  },
+  {
+    "code": "1885",
+    "name": "Lindesberg",
+    "emissions": "5407",
+    "population": 23292
+  },
+  {
+    "code": "1864",
+    "name": "Ljusnarsberg",
+    "emissions": "5571",
+    "population": 4407
+  },
+  {
+    "code": "1884",
+    "name": "Nora",
+    "emissions": "5523",
+    "population": 10627
+  },
+  {
+    "code": "1880",
+    "name": "Örebro",
+    "emissions": "5655",
+    "population": 159348
+  }
+]
