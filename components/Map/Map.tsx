@@ -27,7 +27,7 @@ const INITIAL_VIEW_STATE = {
 const TOOLTIP_COMMON_STYLE = {
   backgroundColor: colorTheme.newColors.black3,
   borderRadius: '5px',
-  fontSize: '0.7em',
+  fontSize: '14px',
   color: colorTheme.newColors.white,
 }
 
@@ -52,7 +52,7 @@ const hexToRGBA = (hex: string): RGBAColor => {
 }
 
 const getColor = (
-  dataPoint: number | string,
+  dataPoint: number | string | Date,
   boundaries: number[] | string[] | Date[],
 ): RGBAColor => {
   const colors: RGBAColor[] = mapColors.map(hexToRGBA)
@@ -116,7 +116,12 @@ export function isMunicipalityData(
   )
 }
 
-function MobileTooltip({ tInfo }: { tInfo: MunicipalityTapInfo }) {
+function MobileTooltip(
+  { tInfo, boundaries }: {
+    tInfo: MunicipalityTapInfo,
+    boundaries: number[] | string[] | Date[]
+  },
+) {
   return (
     <Link
       href={`/kommun/${tInfo.mData.name.toLowerCase()}`}
@@ -134,8 +139,13 @@ function MobileTooltip({ tInfo }: { tInfo: MunicipalityTapInfo }) {
           color: colorTheme.newColors.white, height: 14, width: 14, marginRight: 4,
         }}
       />
-      <span style={{ textDecoration: 'underline' }}>{`${tInfo.mData.name}`}</span>
-      {`: ${tInfo.mData.formattedDataPoint}`}
+      <span style={{ textDecoration: 'underline' }}>
+        {`${tInfo.mData.name}`}
+        :
+      </span>
+      <span style={{ color: `rgba(${getColor(tInfo.mData.dataPoint, boundaries)})`, fontWeight: 'bold' }}>
+        {`${tInfo.mData.formattedDataPoint}%`}
+      </span>
     </Link>
   )
 }
@@ -146,7 +156,7 @@ function Map({
   const [municipalityFeatureCollection, setMunicipalityFeatureCollection] = useState<any>({})
   // "tapped" municipality tooltips are only to be used on touch devices.
   const [lastTapInfo, setLastTapInfo] = useState<MunicipalityTapInfo | null>(null)
-  const wrapperRef = useRef<HTMLDivElement|null>(null)
+  const wrapperRef = useRef<HTMLDivElement | null>(null)
 
   const router = useRouter()
 
@@ -264,11 +274,17 @@ function Map({
           if (!isMunicipalityData(mData) || onTouchDevice()) {
             return null // tooltips on touch devices are handled separately
           }
-          return {
+
+          return ({
             html: `
-            <p>${mData.name}: ${(mData).formattedDataPoint}</p>`,
+            <p>
+              ${mData.name}:
+              <span style="color: rgba(${getColor(mData.dataPoint, boundaries)}); font-weight: bold;">
+                ${(mData).formattedDataPoint}%
+              </span>
+            </p>`,
             style: TOOLTIP_COMMON_STYLE,
-          }
+          })
         }}
         onClick={({ object: mData, x, y }) => {
           if (!isMunicipalityData(mData)) {
@@ -293,7 +309,7 @@ function Map({
       return viewState
     }} */
       />
-      {lastTapInfo && <MobileTooltip tInfo={lastTapInfo} />}
+      {lastTapInfo && <MobileTooltip tInfo={lastTapInfo} boundaries={boundaries} />}
       {children}
     </DeckGLWrapper>
   )
